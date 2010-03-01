@@ -5,8 +5,9 @@ from django.test.client import Client
 from django.core.urlresolvers import reverse
 from django.conf import settings
 
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
 
+from hey.users.models import User
 from hey.avatar import AVATAR_DEFAULT_URL
 
 try:

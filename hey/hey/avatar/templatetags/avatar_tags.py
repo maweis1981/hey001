@@ -5,7 +5,8 @@ from django.utils.translation import ugettext as _
 from django.utils.hashcompat import md5_constructor
 from django.core.urlresolvers import reverse
 
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
+from hey.users.models import User
 
 from hey.avatar import AVATAR_GRAVATAR_BACKUP, AVATAR_GRAVATAR_DEFAULT
 from hey.avatar.util import get_primary_avatar
