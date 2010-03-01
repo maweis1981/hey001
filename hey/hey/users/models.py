@@ -16,6 +16,7 @@ class User(models.Model):
 
     name = models.CharField(max_length=200)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    email = models.EmailField()
     birthday = models.DateField("your birthday")
     province = models.CharField(max_length=10, choices = PROVINCE_CHOICES)
     city = models.CharField(max_length=10)
