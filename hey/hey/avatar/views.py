@@ -13,6 +13,9 @@ from hey.avatar.models import Avatar
 from hey.avatar.util import get_primary_avatar, get_default_avatar_url
 from hey.avatar.forms import PrimaryAvatarForm, DeleteAvatarForm, UploadAvatarForm
 
+
+from hey.users.models import User
+
 try:
     notification = get_app('notification')
 except ImproperlyConfigured:
@@ -53,8 +56,9 @@ def _notification_updated(request, avatar):
             {"user": request.user, "avatar": avatar}
         )
 
-def _get_avatars(user):
+def _get_avatars(user_id):
     # Default set. Needs to be sliced, but that's it. Keep the natural order.
+    user = User.objects.objects.get(pk=user_id)
     avatars = user.avatar_set.all()
     
     # Current avatar
@@ -71,9 +75,10 @@ def _get_avatars(user):
         avatars = avatars[:AVATAR_MAX_AVATARS_PER_USER]
     return (avatar, avatars)    
 
-@login_required
-def add(request, extra_context={}, next_override=None, *args, **kwargs):
-    avatar, avatars = _get_avatars(request.user)
+#@login_required
+def add(request, user_id, extra_context={}, next_override=None, *args, **kwargs):
+    avatar, avatars = _get_avatars(user_id)
+    user = User.objects.objects.get(pk=user_id)
     upload_avatar_form = UploadAvatarForm(request.POST or None,
         request.FILES or None, user=request.user)
     if request.method == "POST" and 'avatar' in request.FILES:
@@ -95,16 +100,18 @@ def add(request, extra_context={}, next_override=None, *args, **kwargs):
             extra_context,
             context_instance = RequestContext(
                 request,
-                { 'avatar': avatar, 
+                { 'avatar': avatar,
+                  'user': user,
                   'avatars': avatars, 
                   'upload_avatar_form': upload_avatar_form,
                   'next': next_override or _get_next(request), }
             )
         )
 
-@login_required
-def change(request, extra_context={}, next_override=None, *args, **kwargs):
-    avatar, avatars = _get_avatars(request.user)
+#@login_required
+def change(request, user_id, extra_context={}, next_override=None, *args, **kwargs):
+    avatar, avatars = _get_avatars(user_id)
+    user = User.objects.objects.get(pk=user_id)
     if avatar:
         kwargs = {'initial': {'choice': avatar.id}}
     else:
@@ -130,7 +137,8 @@ def change(request, extra_context={}, next_override=None, *args, **kwargs):
         extra_context,
         context_instance = RequestContext(
             request,
-            { 'avatar': avatar, 
+            { 'avatar': avatar,
+              'user': user,
               'avatars': avatars,
               'upload_avatar_form': upload_avatar_form,
               'primary_avatar_form': primary_avatar_form,
@@ -138,9 +146,10 @@ def change(request, extra_context={}, next_override=None, *args, **kwargs):
         )
     )
 
-@login_required
-def delete(request, extra_context={}, next_override=None, *args, **kwargs):
-    avatar, avatars = _get_avatars(request.user)
+#@login_required
+def delete(request, user_id, extra_context={}, next_override=None, *args, **kwargs):
+    avatar, avatars = _get_avatars(user_id)
+    user = User.objects.objects.get(pk=user_id)
     delete_avatar_form = DeleteAvatarForm(request.POST or None,
         user=request.user, avatars=avatars)
     if request.method == 'POST':
@@ -164,7 +173,8 @@ def delete(request, extra_context={}, next_override=None, *args, **kwargs):
         extra_context,
         context_instance = RequestContext(
             request,
-            { 'avatar': avatar, 
+            { 'avatar': avatar,
+              'user': user,
               'avatars': avatars,
               'delete_avatar_form': delete_avatar_form,
               'next': next_override or _get_next(request), }

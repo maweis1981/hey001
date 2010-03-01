@@ -14,7 +14,7 @@ class User(models.Model):
 
 
 
-    name = models.CharField(max_length=200)
+    username = models.CharField(max_length=200)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     email = models.EmailField()
     birthday = models.DateField("your birthday")
@@ -24,7 +24,7 @@ class User(models.Model):
     regist_date = models.DateField("regist date",auto_now_add=True)
    
     def __unicode__(self):
-        return self.name
+        return self.username
 
 class UserMoreInfo(models.Model):
 

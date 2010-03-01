@@ -2,12 +2,13 @@
 {% load avatar_tags %}
 
 {% block content %}
+<p>{{ user.username }}</p>
     <p>Your current avatar: </p>
     {% avatar user %}
     {% if not avatars %}
         <p>You haven't uploaded an avatar yet.  Please upload one now.</p>
     {% else %}
-        <form method="POST" action="{% url avatar_change %}">
+        <form method="POST" action="{% url avatar_change user.id %}">
             <ul>
                 {{ primary_avatar_form.as_ul }}
             </ul>
@@ -15,7 +16,7 @@
             <input type="submit" value="Choose new Default" />
         </form>
     {% endif %}
-    <form enctype="multipart/form-data" method="POST" action="{% url avatar_add %}">
+    <form enctype="multipart/form-data" method="POST" action="{% url avatar_add user.id %}">
         {{ upload_avatar_form.as_p }}
         {% csrf_token %}
         <p><input type="submit" value="Upload New Image" /></p>
