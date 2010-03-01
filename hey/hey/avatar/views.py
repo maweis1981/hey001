@@ -58,7 +58,7 @@ def _notification_updated(request, avatar):
 
 def _get_avatars(user_id):
     # Default set. Needs to be sliced, but that's it. Keep the natural order.
-    user = User.objects.objects.get(pk=user_id)
+    user = User.objects.get(pk=user_id)
     avatars = user.avatar_set.all()
     
     # Current avatar
@@ -78,7 +78,7 @@ def _get_avatars(user_id):
 #@login_required
 def add(request, user_id, extra_context={}, next_override=None, *args, **kwargs):
     avatar, avatars = _get_avatars(user_id)
-    user = User.objects.objects.get(pk=user_id)
+    user = User.objects.get(pk=user_id)
     upload_avatar_form = UploadAvatarForm(request.POST or None,
         request.FILES or None, user=request.user)
     if request.method == "POST" and 'avatar' in request.FILES:
@@ -111,7 +111,7 @@ def add(request, user_id, extra_context={}, next_override=None, *args, **kwargs)
 #@login_required
 def change(request, user_id, extra_context={}, next_override=None, *args, **kwargs):
     avatar, avatars = _get_avatars(user_id)
-    user = User.objects.objects.get(pk=user_id)
+    user = User.objects.get(pk=user_id)
     if avatar:
         kwargs = {'initial': {'choice': avatar.id}}
     else:
@@ -149,7 +149,7 @@ def change(request, user_id, extra_context={}, next_override=None, *args, **kwar
 #@login_required
 def delete(request, user_id, extra_context={}, next_override=None, *args, **kwargs):
     avatar, avatars = _get_avatars(user_id)
-    user = User.objects.objects.get(pk=user_id)
+    user = User.objects.get(pk=user_id)
     delete_avatar_form = DeleteAvatarForm(request.POST or None,
         user=request.user, avatars=avatars)
     if request.method == 'POST':

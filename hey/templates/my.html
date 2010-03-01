@@ -61,7 +61,7 @@ $("#logos").html(data);
 {% for ruser in recomms %}
 	<li>
 	<a href="#"></a><img src="/site_media/images/50_17501393_4.jpg" alt="a" width="50" height="50" /></a>
-	<p><a href="/user/view/{{ruser.id}}/">{{ ruser.name }}</a></p>
+	<p><a href="/user/view/{{ruser.id}}/">{{ ruser.username }}</a></p>
 	</li>
 {% endfor %}
 </ul>
