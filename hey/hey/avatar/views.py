@@ -47,13 +47,13 @@ def _get_next(request):
     return next
     
 def _notification_updated(request, avatar):
-    notification.send([request.user], "avatar_updated",
-        {"user": request.user, "avatar": avatar})
+    notification.send([user], "avatar_updated",
+        {"user": user, "avatar": avatar})
     if friends:
         notification.send((x['friend'] for x in
-                Friendship.objects.friends_for_user(request.user)),
+                Friendship.objects.friends_for_user(user)),
             "avatar_friend_updated",
-            {"user": request.user, "avatar": avatar}
+            {"user": user, "avatar": avatar}
         )
 
 def _get_avatars(user_id):
@@ -80,18 +80,18 @@ def add(request, user_id, extra_context={}, next_override=None, *args, **kwargs)
     avatar, avatars = _get_avatars(user_id)
     user = User.objects.get(pk=user_id)
     upload_avatar_form = UploadAvatarForm(request.POST or None,
-        request.FILES or None, user=request.user)
+        request.FILES or None, user=user)
     if request.method == "POST" and 'avatar' in request.FILES:
         if upload_avatar_form.is_valid():
             avatar = Avatar(
-                user = request.user,
+                user = user,
                 primary = True,
             )
             image_file = request.FILES['avatar']
             avatar.avatar.save(image_file.name, image_file)
             avatar.save()
             updated = True
-            request.user.message_set.create(
+            user.message_set.create(
                 message=_("Successfully uploaded a new avatar."))
             if notification:
                 _notification_updated(request, avatar)
@@ -101,7 +101,7 @@ def add(request, user_id, extra_context={}, next_override=None, *args, **kwargs)
             context_instance = RequestContext(
                 request,
                 { 'avatar': avatar,
-                  'user': user,
+                  'hey_user': user,
                   'avatars': avatars, 
                   'upload_avatar_form': upload_avatar_form,
                   'next': next_override or _get_next(request), }
@@ -111,14 +111,19 @@ def add(request, user_id, extra_context={}, next_override=None, *args, **kwargs)
 #@login_required
 def change(request, user_id, extra_context={}, next_override=None, *args, **kwargs):
     avatar, avatars = _get_avatars(user_id)
+
+    print user_id
     user = User.objects.get(pk=user_id)
+    print user.username
+    print user.id
+    print user.pk
     if avatar:
         kwargs = {'initial': {'choice': avatar.id}}
     else:
         kwargs = {}
-    upload_avatar_form = UploadAvatarForm(user=request.user, **kwargs)
+    upload_avatar_form = UploadAvatarForm(user=user, **kwargs)
     primary_avatar_form = PrimaryAvatarForm(request.POST or None,
-        user=request.user, avatars=avatars, **kwargs)
+        user=user, avatars=avatars, **kwargs)
     if request.method == "POST":
         updated = False
         if 'choice' in request.POST and primary_avatar_form.is_valid():
@@ -127,7 +132,7 @@ def change(request, user_id, extra_context={}, next_override=None, *args, **kwar
             avatar.primary = True
             avatar.save()
             updated = True
-            request.user.message_set.create(
+            user.message_set.create(
                 message=_("Successfully updated your avatar."))
         if updated and notification:
             _notification_updated(request, avatar)
@@ -138,7 +143,9 @@ def change(request, user_id, extra_context={}, next_override=None, *args, **kwar
         context_instance = RequestContext(
             request,
             { 'avatar': avatar,
-              'user': user,
+              'hey_user': user,
+              'user_id': user.id,
+              'username': user.username,
               'avatars': avatars,
               'upload_avatar_form': upload_avatar_form,
               'primary_avatar_form': primary_avatar_form,
@@ -151,7 +158,7 @@ def delete(request, user_id, extra_context={}, next_override=None, *args, **kwar
     avatar, avatars = _get_avatars(user_id)
     user = User.objects.get(pk=user_id)
     delete_avatar_form = DeleteAvatarForm(request.POST or None,
-        user=request.user, avatars=avatars)
+        user=user, avatars=avatars)
     if request.method == 'POST':
         if delete_avatar_form.is_valid():
             ids = delete_avatar_form.cleaned_data['choices']
@@ -165,7 +172,7 @@ def delete(request, user_id, extra_context={}, next_override=None, *args, **kwar
                             _notification_updated(request, a)
                         break
             Avatar.objects.filter(id__in=ids).delete()
-            request.user.message_set.create(
+            user.message_set.create(
                 message=_("Successfully deleted the requested avatars."))
             return HttpResponseRedirect(next_override or _get_next(request))
     return render_to_response(
@@ -174,7 +181,7 @@ def delete(request, user_id, extra_context={}, next_override=None, *args, **kwar
         context_instance = RequestContext(
             request,
             { 'avatar': avatar,
-              'user': user,
+              'hey_user': user,
               'avatars': avatars,
               'delete_avatar_form': delete_avatar_form,
               'next': next_override or _get_next(request), }

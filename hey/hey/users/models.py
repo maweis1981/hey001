@@ -26,6 +26,17 @@ class User(models.Model):
     def __unicode__(self):
         return self.username
 
+
+
+
+
+class Message(models.Model):
+     user = models.ForeignKey(User)
+     message = models.CharField(max_length=256)
+     def __unicode(self):
+         return self.message
+
+
 class UserMoreInfo(models.Model):
 
     NATIONAL_CHOICES = (
