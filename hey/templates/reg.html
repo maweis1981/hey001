@@ -10,11 +10,18 @@
 		<script language="javascript1.5" src="/site_media/js/jquery-1.3.2.min.js"></script>
 <script>
 
-$(function(){
-$.get("/hey/xhr_test", function(data){
-$("#logos").html(data);
-})
-})
+$(document).ready(function () {
+        $('#moreinfo_title').toggle(
+            function() { // handlerEven
+                $('#moreinfo_form').slideToggle('slow');
+                $('#moreinfo_form').show();
+            },
+            function() { // handlerOdd
+                $('#moreinfo_form').slideToggle('slow');
+                $('#moreinfo_form').hide();
+            }
+        );
+});
 
 </script>
 </head>
@@ -35,9 +42,8 @@ $("#logos").html(data);
 	</div>
 
 
-	<div id="reg_form">
+<div id="reg_form">
 <form action="/user/reg" method="post">
-
 {% csrf_token %}
 {{ form.as_p }}
 
@@ -45,6 +51,19 @@ $("#logos").html(data);
 
 </form>
 </div>
+
+<div id="moreinfo_title">填写更多个人资料</div>
+<div id="moreinfo_form">
+<form action="/user/fillmore" method="post">
+{% csrf_token %}
+{{ moreform.as_p }}
+
+<input type="submit" value="Save"/>
+</form>
+
+</div>
+
+
 
 
 

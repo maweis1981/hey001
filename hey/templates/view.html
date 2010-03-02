@@ -39,6 +39,8 @@ $("#logos").html(data);
 {{ user.username }}
 {{ user.birthday }}
 
+{{ userMoreInfo.height }}
+
 <a href="{% url avatar_change user.id%}">Change your avatar</a>
 
         {% load avatar_tags %}

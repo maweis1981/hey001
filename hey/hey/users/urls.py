@@ -5,5 +5,6 @@ urlpatterns = patterns('',
      (r'^edit/(?P<user_id>\d+)/$', 'hey.users.views.edit'),
      (r'^view/(?P<user_id>\d+)/$', 'hey.users.views.view'),     
      (r'^reg$', 'hey.users.views.reg'),
+     (r'^fillmore$', 'hey.users.views.fillmore'),
      (r'^xhr_test$', 'hey.users.views.xhr_test'),
         )

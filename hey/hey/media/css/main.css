@@ -164,6 +164,42 @@
     margin-top: 20px;
 }
 
+#fillmore_form {
+    text-align: left;
+    font-size: 14px;
+    font-family: sans-serif, "Lucida Grande", Verdana, Arial;
+    left: 300px;
+    top: 30px;
+    position: absolute;
+    margin-top: 20px;
+}
+
+
+#moreinfo_title{
+    border-bottom-style: solid;
+    border-bottom-color: #690aff;
+    border-bottom-width: 1px;
+    background-color:#6495ed;
+    text-align: left;
+    font-size: 14px;
+    font-family: sans-serif, "Lucida Grande", Verdana, Arial;
+    left: 300px;
+    top: 320px;
+    position: absolute;
+    margin-top: 20px;
+    cursor:pointer;
+}
+
+#moreinfo_form{
+    text-align: left;
+    font-size: 14px;
+    font-family: sans-serif, "Lucida Grande", Verdana, Arial;
+    left: 300px;
+    top: 350px;
+    position: absolute;
+    margin-top: 20px;
+    display:none;
+}
 
 #user_profile{
     text-align: left;

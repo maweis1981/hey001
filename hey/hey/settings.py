@@ -16,6 +16,7 @@ DATABASE_PASSWORD = 'password'         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -25,7 +26,7 @@ TIME_ZONE = 'America/Chicago'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-CN'
 
 SITE_ID = 1
 
@@ -35,12 +36,12 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/Users/peter/github-projects/hey/media'
+MEDIA_ROOT = '/Users/peter/github-projects/hey001/hey/hey/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = 'http://61.155.8.71:8888/site_media'
+MEDIA_URL = 'http://127.0.0.1:8080/site_media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -66,7 +67,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'hey.urls'
 
-TEMPLATE_DIRS = ('/Users/peter/github-projects/hey/templates')
+TEMPLATE_DIRS = ('/Users/peter/github-projects/hey001/hey/templates')
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -76,11 +77,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'hey.users',
     'hey.avatar',
+    'hey.avatar_crop',
+    'photologue',
 )
 
-
-AUTO_GENERATE_AVATAR_SIZES = 80
-
-AVATAR_RESIZE_METHOD = 'Image.ANTIALIAS'
-
-AVATAR_STORAGE_DIR = '/home/peter/hey001/hey/media'
+AVATAR_CROP_MIN_SIZE = 8

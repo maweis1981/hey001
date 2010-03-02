@@ -16,6 +16,11 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
-    (r'^avatar/', include('avatar.urls')),
+    (r'^photologue/', include('photologue.urls')),
+    (r'^avatar/', include('hey.avatar.urls')),
+    (r'^avatar_crop/', include('hey.avatar_crop.urls')),
+    url(r'^accounts/login/', 'django.contrib.auth.views.login', name='auth_login'),
+    url(r'^accounts/logout/', 'django.contrib.auth.views.logout', name='auth_logout'),
+#    url(r'^$', 'django.views.generic.simple.redirect_to', {'url': '/avatar/change/'}),
 
 )

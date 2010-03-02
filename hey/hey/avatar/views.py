@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -111,12 +114,7 @@ def add(request, user_id, extra_context={}, next_override=None, *args, **kwargs)
 #@login_required
 def change(request, user_id, extra_context={}, next_override=None, *args, **kwargs):
     avatar, avatars = _get_avatars(user_id)
-
-    print user_id
     user = User.objects.get(pk=user_id)
-    print user.username
-    print user.id
-    print user.pk
     if avatar:
         kwargs = {'initial': {'choice': avatar.id}}
     else:
