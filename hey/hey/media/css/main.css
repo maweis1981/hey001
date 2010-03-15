@@ -1,3 +1,24 @@
+body {
+    text-align: center;
+}
+
+.container {
+    width: 740px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
+
+.left_column {
+    float: left;
+    width: 490px;
+}
+
+.right_column {
+    float: left;
+    width: 250px;
+}
+
 #layout {
 }
 
@@ -44,7 +65,6 @@
 
 #menus {
     right: 20px;
-    z-index: -1;
     font-size: 12px;
     float: left;
     text-align: right;
@@ -52,6 +72,7 @@
     font-family: monospace;
     position: absolute;
     top: 10px;
+    
 }
 
 #logos {
@@ -174,12 +195,11 @@
     margin-top: 20px;
 }
 
-
-#moreinfo_title{
+#moreinfo_title {
     border-bottom-style: solid;
     border-bottom-color: #690aff;
     border-bottom-width: 1px;
-    background-color:#6495ed;
+    background-color: #6495ed;
     text-align: left;
     font-size: 14px;
     font-family: sans-serif, "Lucida Grande", Verdana, Arial;
@@ -187,10 +207,10 @@
     top: 320px;
     position: absolute;
     margin-top: 20px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-#moreinfo_form{
+#moreinfo_form {
     text-align: left;
     font-size: 14px;
     font-family: sans-serif, "Lucida Grande", Verdana, Arial;
@@ -198,10 +218,10 @@
     top: 350px;
     position: absolute;
     margin-top: 20px;
-    display:none;
+    display: none;
 }
 
-#user_profile{
+#user_profile {
     text-align: left;
     font-size: 14px;
     font-family: sans-serif, "Lucida Grande", Verdana, Arial;

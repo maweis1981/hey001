@@ -1,10 +1,13 @@
 from django.conf.urls.defaults import *
 
-urlpatterns = patterns('',          
-     (r'^my/(?P<user_id>\d+)/$', 'hey.users.views.my'),
-     (r'^edit/(?P<user_id>\d+)/$', 'hey.users.views.edit'),
-     (r'^view/(?P<user_id>\d+)/$', 'hey.users.views.view'),     
-     (r'^reg$', 'hey.users.views.reg'),
-     (r'^fillmore$', 'hey.users.views.fillmore'),
-     (r'^xhr_test$', 'hey.users.views.xhr_test'),
+urlpatterns = patterns('hey.users.views',
+     url(r'^my$', 'my',name='my'),
+     url(r'^edit/(?P<user_id>\d+)/$', 'edit',name='edit'),
+     url(r'^edit$', 'editself',name='editself'),
+     url(r'^view/(?P<user_id>\d+)/$', 'view',name='view'),
+     url(r'^reg$', 'reg',name='reg'),
+     url(r'^fillmore$', 'fillmore',name='fillmore'),
+     url(r'^xhr_test$', 'xhr_test',name='xhr_test'),
+     url(r'^login$', 'login',name='user_login'),
+     url(r'^logout$', 'logout',name='user_logout'),
         )

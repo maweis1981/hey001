@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
 import os.path
 from django.conf import settings
 from PIL import Image
@@ -73,7 +76,7 @@ def avatar_crop(request, id=None):
             Avatar.objects.filter(id=avatar.id).update(primary=False)
             new_avatar = Avatar(user=user, primary=True, avatar=thumb)
             new_avatar.save()
-            user.message_set.create(message="Your new avatar has been saved successfully.")
+            user.message_set.create(message="修改了头像")
             
             return HttpResponseRedirect(reverse("avatar_change",args=(user.id,)))
 

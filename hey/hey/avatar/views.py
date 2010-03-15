@@ -16,7 +16,6 @@ from hey.avatar.models import Avatar
 from hey.avatar.util import get_primary_avatar, get_default_avatar_url
 from hey.avatar.forms import PrimaryAvatarForm, DeleteAvatarForm, UploadAvatarForm
 
-
 from hey.users.models import User
 
 try:
@@ -31,7 +30,7 @@ if 'friends' in settings.INSTALLED_APPS:
 
 def _get_next(request):
     """
-    The part that's the least straightforward about views in this module is how they 
+    The part that's the least straightforward about views in this module is how they
     determine their redirects after they have finished computation.
 
     In short, they will try and determine the next place to go in the following order:
@@ -44,72 +43,72 @@ def _get_next(request):
     redirect to that previous page.
     """
     next = request.POST.get('next', request.GET.get('next',
-        request.META.get('HTTP_REFERER', None)))
+                                                    request.META.get('HTTP_REFERER', None)))
     if not next:
         next = request.path
     return next
-    
+
 def _notification_updated(request, avatar):
     notification.send([user], "avatar_updated",
-        {"user": user, "avatar": avatar})
+                      {"user": user, "avatar": avatar})
     if friends:
         notification.send((x['friend'] for x in
-                Friendship.objects.friends_for_user(user)),
-            "avatar_friend_updated",
-            {"user": user, "avatar": avatar}
-        )
+        Friendship.objects.friends_for_user(user)),
+                          "avatar_friend_updated",
+                          {"user": user, "avatar": avatar}
+                )
 
 def _get_avatars(user_id):
-    # Default set. Needs to be sliced, but that's it. Keep the natural order.
+# Default set. Needs to be sliced, but that's it. Keep the natural order.
     user = User.objects.get(pk=user_id)
     avatars = user.avatar_set.all()
-    
+
     # Current avatar
     primary_avatar = avatars.order_by('-primary')[:1]
     if primary_avatar:
         avatar = primary_avatar[0]
     else:
         avatar = None
-    
+
     if AVATAR_MAX_AVATARS_PER_USER == 1:
         avatars = primary_avatar
     else:
-        # Slice the default set now that we used the queryset for the primary avatar
+    # Slice the default set now that we used the queryset for the primary avatar
         avatars = avatars[:AVATAR_MAX_AVATARS_PER_USER]
-    return (avatar, avatars)    
+    return (avatar, avatars)
 
 #@login_required
 def add(request, user_id, extra_context={}, next_override=None, *args, **kwargs):
     avatar, avatars = _get_avatars(user_id)
     user = User.objects.get(pk=user_id)
     upload_avatar_form = UploadAvatarForm(request.POST or None,
-        request.FILES or None, user=user)
+                                          request.FILES or None, user=user)
     if request.method == "POST" and 'avatar' in request.FILES:
         if upload_avatar_form.is_valid():
             avatar = Avatar(
-                user = user,
-                primary = True,
-            )
+                    user = user,
+                    primary = True,
+                    )
             image_file = request.FILES['avatar']
             avatar.avatar.save(image_file.name, image_file)
             avatar.save()
             updated = True
             user.message_set.create(
-                message=_("Successfully uploaded a new avatar."))
+                    message=_(u"刚上传了一个新的头像。"))
             if notification:
                 _notification_updated(request, avatar)
     return render_to_response(
             'avatar/add.html',
             extra_context,
             context_instance = RequestContext(
-                request,
-                { 'avatar': avatar,
-                  'hey_user': user,
-                  'avatars': avatars, 
-                  'upload_avatar_form': upload_avatar_form,
-                  'next': next_override or _get_next(request), }
+                    request,
+                    { 'avatar': avatar,
+                      'hey_user': user,
+                      'avatars': avatars,
+                      'upload_avatar_form': upload_avatar_form,
+                      'next': next_override or _get_next(request), }
+                    )
             )
-        )
 
 #@login_required
 def change(request, user_id, extra_context={}, next_override=None, *args, **kwargs):
@@ -121,47 +120,47 @@ def change(request, user_id, extra_context={}, next_override=None, *args, **kwar
         kwargs = {}
     upload_avatar_form = UploadAvatarForm(user=user, **kwargs)
     primary_avatar_form = PrimaryAvatarForm(request.POST or None,
-        user=user, avatars=avatars, **kwargs)
+                                            user=user, avatars=avatars, **kwargs)
     if request.method == "POST":
         updated = False
         if 'choice' in request.POST and primary_avatar_form.is_valid():
             avatar = Avatar.objects.get(id=
-                primary_avatar_form.cleaned_data['choice'])
+            primary_avatar_form.cleaned_data['choice'])
             avatar.primary = True
             avatar.save()
             updated = True
             user.message_set.create(
-                message=_("Successfully updated your avatar."))
+                    message=_(u"刚修改了头像."))
         if updated and notification:
             _notification_updated(request, avatar)
         return HttpResponseRedirect(next_override or _get_next(request))
     return render_to_response(
-        'avatar/change.html',
-        extra_context,
-        context_instance = RequestContext(
-            request,
-            { 'avatar': avatar,
-              'hey_user': user,
-              'user_id': user.id,
-              'username': user.username,
-              'avatars': avatars,
-              'upload_avatar_form': upload_avatar_form,
-              'primary_avatar_form': primary_avatar_form,
-              'next': next_override or _get_next(request), }
-        )
-    )
+            'avatar/change.html',
+            extra_context,
+            context_instance = RequestContext(
+                    request,
+                    { 'avatar': avatar,
+                      'hey_user': user,
+                      'user_id': user.id,
+                      'username': user.username,
+                      'avatars': avatars,
+                      'upload_avatar_form': upload_avatar_form,
+                      'primary_avatar_form': primary_avatar_form,
+                      'next': next_override or _get_next(request), }
+                    )
+            )
 
 #@login_required
 def delete(request, user_id, extra_context={}, next_override=None, *args, **kwargs):
     avatar, avatars = _get_avatars(user_id)
     user = User.objects.get(pk=user_id)
     delete_avatar_form = DeleteAvatarForm(request.POST or None,
-        user=user, avatars=avatars)
+                                          user=user, avatars=avatars)
     if request.method == 'POST':
         if delete_avatar_form.is_valid():
             ids = delete_avatar_form.cleaned_data['choices']
             if unicode(avatar.id) in ids and avatars.count() > len(ids):
-                # Find the next best avatar, and set it as the new primary
+            # Find the next best avatar, and set it as the new primary
                 for a in avatars:
                     if unicode(a.id) not in ids:
                         a.primary = True
@@ -171,32 +170,32 @@ def delete(request, user_id, extra_context={}, next_override=None, *args, **kwar
                         break
             Avatar.objects.filter(id__in=ids).delete()
             user.message_set.create(
-                message=_("Successfully deleted the requested avatars."))
+                    message=_(u"刚删除了头像."))
             return HttpResponseRedirect(next_override or _get_next(request))
     return render_to_response(
-        'avatar/confirm_delete.html',
-        extra_context,
-        context_instance = RequestContext(
-            request,
-            { 'avatar': avatar,
-              'hey_user': user,
-              'avatars': avatars,
-              'delete_avatar_form': delete_avatar_form,
-              'next': next_override or _get_next(request), }
-        )
-    )
-    
+            'avatar/confirm_delete.html',
+            extra_context,
+            context_instance = RequestContext(
+                    request,
+                    { 'avatar': avatar,
+                      'hey_user': user,
+                      'avatars': avatars,
+                      'delete_avatar_form': delete_avatar_form,
+                      'next': next_override or _get_next(request), }
+                    )
+            )
+
 def render_primary(request, extra_context={}, user=None, size=80, *args, **kwargs):
     size = int(size)
     avatar = get_primary_avatar(user, size=size)
     if avatar:
-        # FIXME: later, add an option to render the resized avatar dynamically
-        # instead of redirecting to an already created static file. This could
-        # be useful in certain situations, particulary if there is a CDN and
-        # we want to minimize the storage usage on our static server, letting
-        # the CDN store those files instead
+    # FIXME: later, add an option to render the resized avatar dynamically
+    # instead of redirecting to an already created static file. This could
+    # be useful in certain situations, particulary if there is a CDN and
+    # we want to minimize the storage usage on our static server, letting
+    # the CDN store those files instead
         return HttpResponseRedirect(avatar.avatar_url(size))
     else:
         url = get_default_avatar_url()
         return HttpResponseRedirect(url)
-    
+

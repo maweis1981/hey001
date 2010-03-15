@@ -36,16 +36,19 @@ $("#logos").html(data);
 
 
 	<div id="user_profile">
-{{ user.username }}
-{{ user.birthday }}
-
-{{ userMoreInfo.height }}
-
-<a href="{% url avatar_change user.id%}">Change your avatar</a>
-
+		
         {% load avatar_tags %}
-        {% avatar user %}
-        {% avatar user 65 %}
+        {% avatar user %}<a href="{% url avatar_change user.id%}">修改头像</a><br/><br/>
+{{ user.username }}<br/>
+{{ user.birthday }}<br/>
+<br/>
+更多个人信息<br/>
+{{ userMoreInfo.height }}<br/>
+
+
+
+
+
 
 </div>
 

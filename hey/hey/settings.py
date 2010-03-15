@@ -79,6 +79,8 @@ INSTALLED_APPS = (
     'hey.avatar',
     'hey.avatar_crop',
     'photologue',
+    'hey.jchat',
+    'hey.messages',
 )
 
 AVATAR_CROP_MIN_SIZE = 8
