@@ -94,3 +94,4 @@ def editMore(request):
 
 def search(request):
     user = request.user
+    

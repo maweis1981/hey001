@@ -26,4 +26,5 @@ class UserMoreProfileForm(forms.ModelForm):
         if commit:
             userMoreProfile.save()
         return userMoreProfile
-        
+
+    
