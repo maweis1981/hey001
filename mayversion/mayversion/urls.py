@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     (r'^$', 'accounts.views.my'),
     (r'^accounts/', include('accounts.urls')),
     (r'^messages/', include('messages.urls')),
+    (r'^datings/', include('datings.urls')),
     (r'^chat/', include('chat.urls')),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:

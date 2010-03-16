@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response,get_object_or_404
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User,Message
-from accounts.models import UserProfile,UserMoreProfile
+from accounts.models import UserProfile,UserMoreProfile,WhoVisitMe,listWhoVisitMe
 from accounts.forms import UserProfileForm,UserMoreProfileForm
 from datings.models import Dating
 
@@ -25,17 +25,23 @@ def reg(request):
 
 @login_required
 def my(request):
-	user = request.user
-	user_profile = user.profile
-	messages = Message.objects.all().order_by('-id')[:5]
-	datings = Dating.objects.all().order_by('-id')[:5]
-	return render_to_response('my.html', locals())
+    user = request.user
+    user_profile = user.profile
+    messages = Message.objects.all().order_by('-id')[:5]
+    datings = Dating.objects.all().order_by('-id')[:5]
+    recomms = User.objects.all().order_by('-id')[:5]
+    try:
+        visitors = listWhoVisitMe(user)
+    except WhoVisitMe.DoesNotExist:
+        print 'Does Not Exist'
+        visitors = []        
+    return render_to_response('my.html', locals())
 
 @login_required
 def space(request,user_id):
     user = request.user
     visit_user = get_object_or_404(User,pk = user_id)
-    visit_user_profile = visit_user.profile
+    WhoVisitMe(master = visit_user, visitor = user).save()
     return render_to_response('space.html',locals())
 
 

@@ -7,14 +7,31 @@
 
 {% load avatar_tags %}
     <div id="avatar">
-	{% avatar visit_user 200 %}
+	{% avatar visit_user 120 %}
 
 	<p>{{ visit_user.username }}</p>
+		<p><a href="{% url message_send_to_someone visit_user.id %}">给他发短信</a></p>
+	<p>{{ visit_user.profile.gender }}</p>
 	<p>{{ visit_user.profile.birthday }}</p>
+	<p>{{ visit_user.profile.province }}</p>
+	<p>{{ visit_user.profile.city }}</p>
 	<p>{{ visit_user.profile.livecity }}</p>
 	<p>More Info</p>
 	<p>{{ visit_user.profile.get_more_profile.height }}</p>
-	<p><a href="{% url message_send_to_someone visit_user.id %}">给他发短信</a></p>
+	<p>{{ visit_user.profile.get_more_profile.weight }}</p>
+	<p>{{ visit_user.profile.get_more_profile.blood }}</p>
+	<p>{{ visit_user.profile.get_more_profile.body }}</p>
+	<p>{{ visit_user.profile.get_more_profile.national }}</p>
+	<p>{{ visit_user.profile.get_more_profile.country }}</p>
+	<p>{{ visit_user.profile.get_more_profile.gradute }}</p>
+	<p>{{ visit_user.profile.get_more_profile.industry }}</p>
+	<p>{{ visit_user.profile.get_more_profile.incoming }}</p>
+	<p>{{ visit_user.profile.get_more_profile.smoking }}</p>
+	<p>{{ visit_user.profile.get_more_profile.drinking }}</p>
+	<p>{{ visit_user.profile.get_more_profile.family }}</p>
+	<p>{{ visit_user.profile.get_more_profile.language }}</p>
+	<p>{{ visit_user.profile.get_more_profile.hobby }}</p>
+	<p>{{ visit_user.profile.get_more_profile.short }}</p>
 	</div>
 
 

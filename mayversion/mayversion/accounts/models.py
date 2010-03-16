@@ -39,7 +39,6 @@ class UserProfile(models.Model):
         else:
             raise Exception('User not exist')
     def get_more_profile(self):
-        print 'get_more_profile'
         u = UserMoreProfile.objects.get(user = self)
         return u
 
@@ -76,4 +75,29 @@ class UserMoreProfile(models.Model):
             self.user = raw_user
         else:
             raise Exception('no user exist')
+
+class WhoVisitMe(models.Model):
+    master = models.ForeignKey(User,related_name="masters")
+    visitor = models.ForeignKey(User,related_name="visitors")
+    visit_time = models.DateTimeField(auto_now_add=True)
+
+    def whoVisitMe(self):
+        m_user = self.master
+        visitor_list = WhoVisitMe.objects.filter(master=m_user).order_by('-visit_time')
+        visitor_user_list = []
+        for v in visitor_list:
+            visitor_user_list.append(v.visitor)
+        return visitor_user_list
+
+    def __unicode__(self):
+        return '%s visit %s ' % (self.visitor,self.master)
+
+
+def listWhoVisitMe(user):
+    visitor_list = WhoVisitMe.objects.filter(master=user).distinct().order_by('-visit_time')
+    visitor_user_list = []
+    for v in visitor_list:
+        if not user == v.visitor:
+            visitor_user_list.append(v.visitor)
+    return visitor_user_list
 
