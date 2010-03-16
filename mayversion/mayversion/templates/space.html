@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="reg_form">
+
+
+{% load avatar_tags %}
+    <div id="avatar">
+	{% avatar visit_user 200 %}
+
+	<p>{{ visit_user.username }}</p>
+	<p>{{ visit_user.profile.birthday }}</p>
+	<p>{{ visit_user.profile.livecity }}</p>
+	<p>More Info</p>
+	<p>{{ visit_user.profile.get_more_profile.height }}</p>
+	<p><a href="{% url message_send_to_someone visit_user.id %}">给他发短信</a></p>
+	</div>
+
+
+
+</div>
+
+
+	<div id="messages">
+	<div id="message_bar">Messages</div>
+<div id="message_list">
+
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+
+
+<input type="text" name="msg" value="hey, how are you"/><br/>
+<input type="button" value="submit"/>
+
+</div>
+
+	</div>
+
+{% endblock %}
+
+

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div id="recommendation">
+	<div id="recomm_title">推荐</div>
+	<div id="recomm_friends">
+
+{% load avatar_tags %}
+<ul id="recomm_friend">
+{% for ruser in recomms %}
+	<li>
+	<a href="{% url space ruser.id %}">{% avatar ruser %} </a>
+	<p><a href="{% url space ruser.id %}">{{ ruser.username }}</a></p>
+	</li>
+{% endfor %}
+</ul>
+
+	</div>
+	</div>
+
+	<div id="task">
+	<div id="task_bar">动态</div>
+	<div id="task_list">
+	<ul>
+	{% for m in messages %}
+	<li><a href="#">{{ m.user }} - {{ m.message }}</a></li>
+	{% endfor %}
+	</ul>
+	</div>
+	</div>
+
+
+
+
+	<div id="party">
+	<div id="party_bar">Party</div>
+	<div id="party_list">
+	<ul>
+	<li><a href="#">Julia want a dating with handsome boy.(end 2010-03-01)</a></li>
+	<li><a href="#">Alex want a dating with pretty girl.(end 2010-03-01)</a></li>
+	<li><a href="#">Obama want a dating with somebody.(end 2010-03-01)</a></li>
+	</ul>
+	</div>
+	</div>
+
+
+
+	<div id="messages">
+	<div id="message_bar">Messages</div>
+<div id="message_list">
+
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+
+
+<input type="text" name="msg" value="hey, how are you"/><br/>
+<input type="button" value="submit"/>
+
+</div>
+
+	</div>
+
+{% endblock %}

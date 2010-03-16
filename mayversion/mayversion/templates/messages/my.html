@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+Sended Messages:
+            <ul>
+                {% for sm in send_messages.all %}
+                <li>{{ sm.receiver }} {{ sm.content }} {{ sm.sendTime}}</li>
+                {% endfor %}
+            </ul>
+
+
+Received Messages:
+            <ul>
+                {% for rm in receive_messages.all %}
+                <li>{{rm.sender }} {{ rm.content }} {{ rm.sendTime}}</li>
+                {% endfor %}
+            </ul>
+
+
+{% endblock%}

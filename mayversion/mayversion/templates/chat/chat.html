@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chat</title>
+    <script src="/static/js/Orbited.js"></script>
+    <script type="text/javascript" src="/static/js/ajaxroutines.js"></script>
+    <link rel="stylesheet" href="/static/css/chat.css">
+    <script src="/static/js/chat.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <input type="text" id="nickname">
+    <input type="button" value="nickname" name="nickname" onClick="connect();">
+    <div id="box"></div>
+    <input type="text" id="chat">
+    <input type="submit" value="chat" onClick="send_msg();">
+    <iframe id="events"></iframe>
+  </body>
+</html>

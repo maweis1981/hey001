@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+
+
+<div id="reg_form">
+<form action="/accounts/reg" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Save"/>
+</form>
+</div>
+
+
+
+
+
+
+	<div id="messages">
+	<div id="message_bar">Messages</div>
+<div id="message_list">
+
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+<p><a href="#">hey, where are u from</a></p>
+
+
+<input type="text" name="msg" value="hey, how are you"/><br/>
+<input type="button" value="submit"/>
+
+</div>
+
+	</div>
+
+{% endblock %}
+
+
