@@ -2,7 +2,7 @@ from django import forms
 from django.forms.models import ModelForm
 
 from django.contrib.auth.models import User
-from mayversion.messages.models import Message
+from messages.models import Message
 
 from django.forms.widgets import Textarea
 

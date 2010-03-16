@@ -8,15 +8,15 @@ from django.contrib.auth.models import User
 class Dating(models.Model):
     title = models.CharField(max_length=256)
     content = models.TextField()
-    creater = models.ForeignKey(User,unique=True)
+    creater = models.ForeignKey(User)
     city = models.CharField(max_length=30)
     status = models.IntegerField(default=1)
     type = models.IntegerField(default=1)
     start_date = models.DateField(auto_now_add=True)
     start_time = models.DateTimeField(auto_now_add=True)
-    dating_img = models.ImageField()
+
     #will add more features
-    avatar = models.ImageField(max_length=1024, upload_to='/media', blank=True)
+    dating_img = models.ImageField(max_length=1024, upload_to='/media', blank=True)
     date_uploaded = models.DateTimeField(auto_now_add=True)
     
     tags = TagField()
@@ -26,4 +26,6 @@ class Dating(models.Model):
 
     def get_tags(self,tags):
         return Tag.objects.get_for_object(self)
-    
+
+    def __unicode__(self):
+        return self.title

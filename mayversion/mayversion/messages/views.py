@@ -7,8 +7,8 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
-from mayversion.messages.forms import MessageForm
-from mayversion.messages.models import Message
+from messages.forms import MessageForm
+from messages.models import Message
 
 @login_required
 def send(request):

@@ -34,12 +34,12 @@
 
 
 	<div id="party">
-	<div id="party_bar">Party</div>
+	<div id="party_bar">Dating</div>
 	<div id="party_list">
 	<ul>
-	<li><a href="#">Julia want a dating with handsome boy.(end 2010-03-01)</a></li>
-	<li><a href="#">Alex want a dating with pretty girl.(end 2010-03-01)</a></li>
-	<li><a href="#">Obama want a dating with somebody.(end 2010-03-01)</a></li>
+	{% for d in datings %}
+	<li><a href="#">{{ d.title }}</a></li>
+	{% endfor %}
 	</ul>
 	</div>
 	</div>

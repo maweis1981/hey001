@@ -6,7 +6,7 @@ Replace these with more appropriate tests for your application.
 """
 
 from django.test import TestCase
-from mayversion.accounts.models import UserProfile,UserMoreProfile
+from accounts.models import UserProfile,UserMoreProfile
 
 class SimpleTest(TestCase):
 

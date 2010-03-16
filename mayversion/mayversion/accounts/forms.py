@@ -1,5 +1,5 @@
 from django import forms
-from mayversion.accounts.models import UserProfile,UserMoreProfile
+from accounts.models import UserProfile,UserMoreProfile
 
 
 class UserProfileForm(forms.ModelForm):

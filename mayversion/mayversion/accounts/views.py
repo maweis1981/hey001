@@ -5,8 +5,9 @@ from django.shortcuts import render_to_response,get_object_or_404
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User,Message
-from mayversion.accounts.models import UserProfile,UserMoreProfile
-from mayversion.accounts.forms import UserProfileForm,UserMoreProfileForm
+from accounts.models import UserProfile,UserMoreProfile
+from accounts.forms import UserProfileForm,UserMoreProfileForm
+from datings.models import Dating
 
 def reg(request):
     if request.method == 'POST':
@@ -27,9 +28,8 @@ def my(request):
 	user = request.user
 	user_profile = user.profile
 	messages = Message.objects.all().order_by('-id')[:5]
-	recomms = User.objects.all()[:4]
+	datings = Dating.objects.all().order_by('-id')[:5]
 	return render_to_response('my.html', locals())
-
 
 @login_required
 def space(request,user_id):
@@ -94,4 +94,3 @@ def editMore(request):
 
 def search(request):
     user = request.user
-    
