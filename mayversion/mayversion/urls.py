@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     (r'^messages/', include('messages.urls')),
     (r'^datings/', include('datings.urls')),
     (r'^chat/', include('chat.urls')),
+    (r'^microblog/', include('microblog.urls')),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),

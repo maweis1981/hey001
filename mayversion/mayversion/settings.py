@@ -100,9 +100,10 @@ INSTALLED_APPS = (
 'accounts',
 'messages',
 'datings',
-'chat',
+'microblog',
 'avatar_crop',
 'avatar',
+'chat',
 )
 
 AVATAR_CROP_MIN_SIZE = 8

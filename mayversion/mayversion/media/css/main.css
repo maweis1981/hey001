@@ -3,7 +3,6 @@ body {
 }
 
 .container {
-    width: 740px;
     margin: 0 auto;
     padding: 0;
     text-align: left;
@@ -35,6 +34,8 @@ body {
     font-family: monospace;
     margin-top: 20px;
     padding-top: 20px;
+    left:2px;
+    width: 230px;
     border-left-width: 0px;
     border-bottom-width: 0px;
     border-right-width: 0px;
@@ -57,8 +58,8 @@ body {
     font-size: 14px;
     z-index: 6;
     font-family: sans-serif, "Lucida Grande", Verdana, Arial;
-    left: 300px;
-    top: 40px;
+    left: 200px;
+    top: 100px;
     position: absolute;
     margin-top: 20px;
 }
@@ -84,7 +85,29 @@ body {
     text-align: left;
 }
 
+
+#send_tweets_form
+{
+    position: absolute;
+    top: 30px;
+    left: 200px;
+}
+
+
+#sendMyTweet {
+    border-bottom-style: solid;
+    border-bottom-color: #690aff;
+    border-bottom-width: 1px;
+    cursor: pointer;
+}
+
+#tweetForm {
+    height: 20px;
+    width: 80px;
+}
+
 #recomm_title {
+    top: 80px;
     border-bottom-style: solid;
     border-bottom-color: #690aff;
     border-bottom-width: 1px;
@@ -93,11 +116,12 @@ body {
 }
 
 #recomm_friends {
+
 }
 
 #recomm_friend, #recomm_friend li {
     list-style: none;
-    padding-top: 2px;
+    padding-top: 80px;
     padding: 10px;
     padding-bottom: 2px;
     margin: 0;
@@ -123,8 +147,8 @@ body {
     font-size: 14px;
     z-index: 6;
     font-family: sans-serif, "Lucida Grande", Verdana, Arial;
-    left: 300px;
-    top: 220px;
+    left: 200px;
+    top: 300px;
     position: absolute;
     margin-top: 20px;
 }
@@ -151,8 +175,8 @@ body {
     font-size: 14px;
     z-index: 6;
     font-family: sans-serif, "Lucida Grande", Verdana, Arial;
-    left: 300px;
-    top: 350px;
+    left: 200px;
+    top: 440px;
     position: absolute;
     margin-top: 20px;
 }
@@ -233,11 +257,29 @@ body {
 
 #messages {
     right: 20px;
+    left:800px;
     float: left;
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
     z-index: -1;
     top: 60px;
     position: absolute;
+}
+
+#my_tweet_timeline_button{
+    top: 40px;
+    background-color:red;
+    left: 800px;
+    position:absolute;
+    cursor:pointer;
+}
+
+#public_tweet_timeline_button{
+    top:40px;
+    left: 850px;
+    background-color: red;
+    position:absolute;
+    cursor: pointer;
+
 }
 
 #message_bar {
@@ -252,6 +294,7 @@ body {
 }
 
 #message_list {
+
 }
 
 p {

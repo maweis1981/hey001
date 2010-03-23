@@ -1,11 +1,11 @@
-from pyorbited.simple import Client
-
 from django.shortcuts import render_to_response
 from django.conf import settings
 from django.http import HttpResponse
+from pyorbited.simple import Client
+orbit = Client()
+orbit.connect()
 
 users = []
-orbit = Client()
 
 def chat_page(request, users = users, orbit = orbit):
     return render_to_response('chat/chat.html',locals())

@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 
-from django.db import models
+from django.db import models,connection
 from django.contrib.auth.models import User,UserManager
 
 class UserProfile(models.Model):
@@ -92,12 +92,17 @@ class WhoVisitMe(models.Model):
     def __unicode__(self):
         return '%s visit %s ' % (self.visitor,self.master)
 
-
 def listWhoVisitMe(user):
-    visitor_list = WhoVisitMe.objects.filter(master=user).distinct().order_by('-visit_time')
-    visitor_user_list = []
-    for v in visitor_list:
-        if not user == v.visitor:
-            visitor_user_list.append(v.visitor)
-    return visitor_user_list
+    query = ("select distinct visitor_id from accounts_whovisitme "
+                "where master_id='%(user_id)s'") % {
+                    'user_id': user.id,
+                    }
+    cursor = connection.cursor()
+    visitor_ids = cursor.execute(query)
+    visitorList = []
+    
+    for v in cursor.fetchall():
+        print v[0]
+        visitorList.append(User.objects.get(pk=int(v[0])))
+    return visitorList
 

@@ -1,0 +1,6 @@
+{% for t in tweets %}
+<a href="{% url space t.sender.id %}">{{ t.sender }}</a>: {{ t.text }} on {{ t.sent }}<br/>
+{% endfor %}
+<hr/>
+{{ prefix_sender }}<br/>
+{{ are_mine }}<br/>

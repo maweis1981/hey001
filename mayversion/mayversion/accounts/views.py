@@ -1,20 +1,22 @@
 from django.contrib.auth.forms import UserCreationForm
 
 from django.http import HttpResponseRedirect
-from django.shortcuts import render_to_response,get_object_or_404
+from django.shortcuts import render_to_response,get_object_or_404,HttpResponse
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User,Message
 from accounts.models import UserProfile,UserMoreProfile,WhoVisitMe,listWhoVisitMe
 from accounts.forms import UserProfileForm,UserMoreProfileForm
 from datings.models import Dating
+from microblog.models import TweetInstance
+from microblog.forms import TweetForm
 
 def reg(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            request.session['user_id'] = user.id
+            
             return HttpResponseRedirect(reverse("my",args=()))
         else:
             return HttpResponseRedirect('/')
@@ -42,6 +44,7 @@ def space(request,user_id):
     user = request.user
     visit_user = get_object_or_404(User,pk = user_id)
     WhoVisitMe(master = visit_user, visitor = user).save()
+    tweets = TweetInstance.objects.tweets_for(request.user).order_by("-sent")
     return render_to_response('space.html',locals())
 
 
@@ -100,3 +103,15 @@ def editMore(request):
 
 def search(request):
     user = request.user
+
+
+
+def friends(request):
+    return HttpResponse('''
+    @peter \n
+    @yanger \n
+    @caoxg \n
+    @ydtang \n
+    @gzx \n
+    @kcome \n
+    ''')

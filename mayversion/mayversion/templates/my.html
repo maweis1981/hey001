@@ -1,11 +1,21 @@
 {% extends "base.html" %}
 
+{% block extra_head %}
+
+  <link rel="stylesheet" href="/static/css/jquery.autocomplete.css" type="text/css" />
+  <script type="text/javascript" src="/static/js/jquery.bgiframe.min.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.autocomplete.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.form.js"></script>
+  
+{% endblock %}
+
 {% block content %}
+
 
 	<div id="recommendation">
 	<div id="recomm_title">推荐</div>
-	<div id="recomm_friends">
 
+	<div id="recomm_friends">
 {% load avatar_tags %}
 <ul id="recomm_friend">
 {% for ruser in recomms %}
@@ -18,6 +28,8 @@
 
 	</div>
 	</div>
+
+
 
 	<div id="task">
 	<div id="task_bar">动态</div>
@@ -46,17 +58,6 @@
 
 
 
-	<div id="messages">
-	<div id="message_bar">Messages</div>
-<div id="message_list">
-{% for v in visitors %}
-<p><a href="#">
-{% avatar v %}
-{{ v.username }}
-</a></p>
-{% endfor %}
-</div>
-
-	</div>
+	
 
 {% endblock %}
