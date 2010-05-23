@@ -23,7 +23,7 @@ class UserProfile(models.Model):
 
     user = models.ForeignKey(User, unique=True)
     gender = models.IntegerField(max_length=1, choices=GENDER_CHOICES,default=1)
-    birthday = models.DateField(blank=True)
+    birthday = models.DateField(blank=True,null=True)
     province = models.CharField(max_length=20, choices=PROVINCE_CHOICES,default=1)
     city = models.CharField(max_length=10)
     livecity = models.CharField(max_length=10)
@@ -75,6 +75,7 @@ class UserMoreProfile(models.Model):
             self.user = raw_user
         else:
             raise Exception('no user exist')
+            
 
 class WhoVisitMe(models.Model):
     master = models.ForeignKey(User,related_name="masters")

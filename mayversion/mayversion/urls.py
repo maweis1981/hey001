@@ -16,7 +16,6 @@ urlpatterns = patterns('',
     (r'^microblog/', include('microblog.urls')),
     (r'^bookreader/', include('bookreader.urls')),
     (r'^votes/', include('votes.urls')),
-    (r'^polls/', include('polls.urls')),
     (r'^photologue/', include('photologue.urls')),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:

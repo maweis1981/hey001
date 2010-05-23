@@ -20,12 +20,14 @@ from django.core.serializers import json, serialize
 from django.db.models.query import QuerySet
 from django.http import HttpResponse
 
+from avatar.templatetags.avatar_tags import avatar
 
+from django.utils.timesince import timesince
 
 import json
 import stomp
-from datetime import time
-import time
+import datetime
+
 
 
 
@@ -71,8 +73,8 @@ def ajaxTweetSend(request):
             conn = stomp.Connection([(settings.ORBITED_SERVER, 61613)], 'guest', 'guest')
             conn.start()
             conn.connect()
-
-            o = {"user":request.user.username,"message":request.POST["text"],"time":time.strftime("%X", time.gmtime())}
+            now = datetime.datetime.now()
+            o = {"user_id":request.user.id,"avatar":avatar(request.user,20),"user":request.user.username,"message":request.POST["text"],"time":timesince(now)}
             msg_to_send = json.dumps(o)
         except Exception as msg:
             print msg

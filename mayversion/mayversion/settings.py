@@ -101,12 +101,12 @@ INSTALLED_APPS = (
 # Uncomment the next line to enable the admin:
 'django.contrib.admin',
 'accounts',
+'groups',
 'messages',
 'datings',
 'microblog',
 'bookreader',
 'votes',
-'polls',
 'avatar_crop',
 'avatar',
 'chat',
@@ -120,4 +120,4 @@ AVATAR_CROP_MIN_SIZE = 8
 
 AUTH_PROFILE_MODULE = "accounts.UserProfile"
 
-ORBITED_SERVER = "192.168.100.234"
+ORBITED_SERVER = "192.168.0.2"

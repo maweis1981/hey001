@@ -13,7 +13,7 @@
 
         <script>
 //        Orbited.settings.port = 9000;
-        Orbited.settings.hostname = "192.168.100.234";
+        Orbited.settings.hostname = "192.168.0.2";
 //        Orbited.settings.streaming = false;
         TCPSocket = Orbited.TCPSocket;
         </script>
@@ -71,10 +71,10 @@
             }
     });
 });
-
+{% load avatar_tags %}
 
         function add_message(msg){
-          $("<li><img src=\"/media/avatars/peter/resized/20/2197221326_c004030139_b.jpg\" alt=\"peter\" width=\"20\" height=\"20\" />"+
+          $("<li>" + msg["avatar"] +
           "<a href=''>" + msg["user"] + "</a><span>" + msg["message"] + " at " + msg["time"] + "</span></li>").prependTo("#sidebar-message");
           
 
@@ -179,7 +179,7 @@
 <li>
 {% avatar t.sender 20 %}
 <a href="{% url space t.sender.id %}">{{ t.sender }}</a>
-<span>{{ t.text }}</span>
+<span>{{ t.text }} at {{ t.sent|timesince }}</span>
 </li>
 {% endfor %}
 {% endif %}
