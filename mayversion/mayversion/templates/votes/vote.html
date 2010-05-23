@@ -1,0 +1,56 @@
+{% extends "votes/base.html" %}
+
+{% block title %}Inline Formset{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript">
+    $(function() {
+        $('#id_orders_table tbody tr').formset({
+            // For inline formsets, be sure to set the prefix, as the default prefix
+            // ('form') isn't correct.
+            // Django appears to generate the prefix from the lowercase plural
+            // name of the related model, with camel-case converted to underscores.
+            prefix: 'choice_set'
+        })
+    })
+</script>
+<style type="text/css">
+    .delete-row {
+        margin-left:5px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div>
+    <div class="entry">
+        <h1>{{ msg }}</h1>
+        <form action="" method="post">
+                  <h1>{{ poll.question }}</h1>
+                  <input type="hidden" name="poll_id" value="{{ poll.id }}"/>
+                    {% for p in poll.choice_set.all  %}
+                    <div class="vl1">
+                    <div class="l w230 tar">   
+                        <input name="vote" type="checkbox" value="{{ p.id }}"/> {{ p.choice }}
+                    </div>
+                    </div>
+                    {% endfor %}
+                    
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div>{% for v in poll.vote_set.all %}
+                    {{ v.user }}: {{ v.choice }} , 
+                    {% endfor %}
+                    </div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+    <input name="button" type="submit" class="rb1" id="btn_fb" title="投票" onclick="" onmouseover="this.className='rb2';" onmouseout="this.className='rb1';" value="投票" />
+    
+        </form>
+<div id="name">
+    <a href="/votes/newPoll/">我也要创建投票</a>
+</div>
+          
+       
+    </div>
+</div>
+{% endblock %}

@@ -8,12 +8,16 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Example:
     # (r'^mayversion/', include('mayversion.foo.urls')),
-    (r'^$', 'accounts.views.my'),
+    (r'^my/', 'accounts.views.my'),
     (r'^accounts/', include('accounts.urls')),
     (r'^messages/', include('messages.urls')),
     (r'^datings/', include('datings.urls')),
     (r'^chat/', include('chat.urls')),
     (r'^microblog/', include('microblog.urls')),
+    (r'^bookreader/', include('bookreader.urls')),
+    (r'^votes/', include('votes.urls')),
+    (r'^polls/', include('polls.urls')),
+    (r'^photologue/', include('photologue.urls')),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),

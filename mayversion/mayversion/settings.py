@@ -33,6 +33,7 @@ TIME_ZONE = 'America/Chicago'
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'zh-CN'
 
 SITE_ID = 1
 
@@ -44,6 +45,7 @@ PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
 STATIC_ROOT = os.path.join(PROJECT_PATH, 'media')
+BOOKS_ROOT = '/Users/peter/Public/books/'
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
@@ -54,6 +56,7 @@ STATIC_ROOT = os.path.join(PROJECT_PATH, 'media')
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
+BOOK_URL = '/book/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -101,11 +104,20 @@ INSTALLED_APPS = (
 'messages',
 'datings',
 'microblog',
+'bookreader',
+'votes',
+'polls',
 'avatar_crop',
 'avatar',
 'chat',
+'photologue',
+'tagging',
+'sorted_paginated_authored_archived_list_view',
+'iptocountry',
 )
 
 AVATAR_CROP_MIN_SIZE = 8
 
 AUTH_PROFILE_MODULE = "accounts.UserProfile"
+
+ORBITED_SERVER = "192.168.100.234"

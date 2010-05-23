@@ -16,12 +16,19 @@ from microblog.forms import TweetForm
 
 from django.utils import simplejson
 
-
-
-
 from django.core.serializers import json, serialize
 from django.db.models.query import QuerySet
 from django.http import HttpResponse
+
+
+
+import json
+import stomp
+from datetime import time
+import time
+
+
+
 
 if "notification" in settings.INSTALLED_APPS:
     from notification import models as notification
@@ -60,6 +67,17 @@ def ajaxTweetSend(request):
     print form.is_valid()
     if form.is_valid():
         form.save()
+        try:
+            conn = stomp.Connection([(settings.ORBITED_SERVER, 61613)], 'guest', 'guest')
+            conn.start()
+            conn.connect()
+
+            o = {"user":request.user.username,"message":request.POST["text"],"time":time.strftime("%X", time.gmtime())}
+            msg_to_send = json.dumps(o)
+        except Exception as msg:
+            print msg
+        print msg_to_send
+        conn.send(msg_to_send, destination= request.user.username)
         return HttpResponse('{result:ok}')
     else:
         return HttpResponse('{result:data error}')
@@ -151,6 +169,7 @@ def following(request, username, template_name="microblog/following.html"):
                                          follower_content_type=ContentType.objects.get_for_model(other_user))
     follow_list = [u.followed_content_object for u in following]
     return _follow_list(request, other_user, follow_list, template_name)
+    
 
 def toggle_follow(request, username):
     """
@@ -161,7 +180,13 @@ def toggle_follow(request, username):
         is_me = True
     else:
         is_me = False
+    print 'Is Me = %s' % is_me
+    print 'request user authenticated = %s ' % request.user.is_authenticated()
+    print 'request method = %s' % request.method
+    print 'request post action = %s' % request.POST["action"]
     if request.user.is_authenticated() and request.method == "POST" and not is_me:
+        print 'request post action = %s' % request.POST["action"]
+        
         if request.POST["action"] == "follow":
             Following.objects.follow(request.user, other_user)
             request.user.message_set.create(
@@ -174,6 +199,19 @@ def toggle_follow(request, username):
                     message=_("You have stopped following %(other_user)s") % {'other_user': other_user})
     return HttpResponseRedirect(reverse("my"))
 
+    
+def xhr(request):
+    print '--------'
+    print 'POSTDATA: ' , request.POST
+    message = request.POST["message"]
+    print message
+    try:
+        import xmlrpclib
+        proxy = xmlrpclib.ServerProxy("http://localhost:8045")
+        proxy.transmit("/topic/messages", message)
+    except Exception as msg:
+        print type(msg)
+    return HttpResponse("OK")
 
 
 

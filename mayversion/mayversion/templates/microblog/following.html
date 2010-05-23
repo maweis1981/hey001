@@ -1,0 +1,22 @@
+{% load avatar_tags %}
+
+{% avatar other_user 48%}
+
+{% for f in follow_list %}
+
+<li class="hentry">
+  <span class="thumb vcard author">
+  {% avatar f 48 %}
+  </span>
+ <span class="status-body">
+    <span class="status-content">
+    <strong><a href="{% url space f.id %}" class="tweet-url screen-name">{{ f.username }}</a></strong>
+
+    <span class="entry-content">{{ f.city }}</span>
+   </span>
+  <br/>
+</span>
+</span>
+</li>
+
+{% endfor %}

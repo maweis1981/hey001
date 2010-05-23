@@ -1,0 +1,59 @@
+{% extends "votes/base.html" %}
+
+{% block title %}Inline Formset{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript">
+    $(function() {
+        $('#id_orders_table tbody tr').formset({
+            // For inline formsets, be sure to set the prefix, as the default prefix
+            // ('form') isn't correct.
+            // Django appears to generate the prefix from the lowercase plural
+            // name of the related model, with camel-case converted to underscores.
+            prefix: 'choice_set'
+        })
+    })
+</script>
+<style type="text/css">
+    .delete-row {
+        margin-left:5px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div>
+    <div class="entry">
+        
+        <div id="name">
+            <a href="/votes/newPoll/">我也要创建投票</a>
+        </div>
+     
+        {% for p in polls.object_list %}
+        <p>
+            [<a href="{% url space p.owner.id %}">{{ p.owner }}</a>] : 
+            <a href="/votes/vote/{{ p.id }}">{{ p.question }}</a> [{{ p.vote_set.all|length }}]</p>
+        {% endfor%}
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if polls.has_previous %}
+                    <a href="?page={{ polls.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ polls.number }} of {{ polls.paginator.num_pages }}.
+                </span>
+
+                {% if polls.has_next %}
+                    <a href="?page={{ polls.next_page_number }}">next</a>
+                {% endif %}
+            </span>
+        </div>
+     
+
+          
+       
+    </div>
+</div>
+{% endblock %}

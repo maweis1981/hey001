@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/15/trunk/polls/templates/polls
+END
+posted.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/6/trunk/polls/templates/polls/posted.html
+END
+vote_form.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/4/trunk/polls/templates/polls/vote_form.html
+END
+poll_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/15/trunk/polls/templates/polls/poll_list.html
+END
+vote_form_ajax.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/11/trunk/polls/templates/polls/vote_form_ajax.html
+END
+vote_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/15/trunk/polls/templates/polls/vote_list.html
+END
+poll_form.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/polls/templates/polls/poll_form.html
+END

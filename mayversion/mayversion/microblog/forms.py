@@ -27,8 +27,7 @@ class TweetForm(forms.ModelForm):
         return self.cleaned_data['text'].strip()
 
     def save(self):
-        text = self.cleaned_data["text"]
         tweet_instance = super(TweetForm, self).save(commit=False)
         tweet_instance.sender = self.user
         tweet_instance.save()
-        #tweet(self.user, text, tweet_instance)
+#        tweet(self.user, text, tweet_instance)

@@ -1,5 +1,51 @@
 {% extends "base.html" %}
 
+{% block extra_head %}
+<script>
+       $(document).ready(function(){
+          $('#toggle_follow').click(function(){
+              var data = 'action=follow';
+              $.post("{% url toggle_follow visit_user.username %}",data);
+              $('#toggle_follow').text = 'UnFollow {{ visit_user.username}}';
+              $('#toggle_follow').id = 'toggle_unfollow';
+            });
+            
+            $('#toggle_unfollow').click(function(){
+                var data = 'action=unfollow';
+                $.post("{% url toggle_follow visit_user.username %}",data);
+             });
+            
+       });
+</script>
+
+<style type="text/css" media="screen">
+    #toggle_unfollow{
+        border-bottom-style: solid;
+        border-bottom-color: #690aff;
+        border-bottom-width: 1px;
+        background-color: #6495ed;
+        text-align: left;
+        font-size: 14px;
+        font-family: sans-serif, "Lucida Grande", Verdana, Arial;
+        cursor: pointer;
+    }
+    
+    #toggle_follow{
+        border-bottom-style: solid;
+        border-bottom-color: #690aff;
+        border-bottom-width: 1px;
+        background-color: #6495ed;
+        text-align: left;
+        font-size: 14px;
+        font-family: sans-serif, "Lucida Grande", Verdana, Arial;
+        cursor: pointer;
+
+    }
+</style>
+
+
+{% endblock %}
+
 {% block content %}
 
 <div id="reg_form">
@@ -10,7 +56,25 @@
 	{% avatar visit_user 120 %}
 
 	<p>{{ visit_user.username }}</p>
-		<p><a href="{% url message_send_to_someone visit_user.id %}">给他发短信</a></p>
+	<p><a href="{% url message_send_to_someone visit_user.id %}">给他发短信</a></p>
+	
+	{% if follow_relative %}
+	<p id="toggle_unfollow">UnFollow {{ visit_user.username}}</p>
+	{% else %}
+	<p id="toggle_follow">Follow {{ visit_user.username}}</p>
+	{% endif %}
+	
+	
+	<p>
+    <a href="{% url tweet_following visit_user.username %}">Following :{{ following_list|length }}</a>
+    </p><p>
+    <a href="{% url tweet_followers visit_user.username %}">Followers :{{ followers_list|length }}</a>
+    </p>
+    <p>他的测试</p>
+    {% for v in votes %}
+    <p><a href="{% url single_vote v.id %}"> {{ v.question }} </a></p>
+    {% endfor %}
+    <p>他的个人资料</p>
 	<p>{{ visit_user.profile.gender }}</p>
 	<p>{{ visit_user.profile.birthday }}</p>
 	<p>{{ visit_user.profile.province }}</p>
@@ -39,19 +103,6 @@
 </div>
 
 
-	<div id="messages">
-	<div id="message_bar">Messages</div>
-<div id="message_list">
-{% load microblog_tags %}
-
-    {% tweet_listing tweets 1 0 %}
-
-<input type="text" name="msg" value="hey, how are you"/><br/>
-<input type="button" value="submit"/>
-
-</div>
-
-	</div>
 
 {% endblock %}
 

@@ -4,7 +4,17 @@
                   <div id="reg_form">
         <form method="POST" action="{% url message_send %}">
             <ul>
-                {{ form.as_ul }}
+ 
+                <input type="hidden" name="sender" value="{{ request.user.id }}"/>
+
+                {% if receiver %}
+                <input type="hidden" name="receiver" value="{{ receiver.id }}"/>
+                发给：<input type="text" value="{{ receiver.username }}" readonly="true"/>
+                {% else %}
+                发给：{{ form.receiver }}
+                {% endif %}                
+                <p>内容：{{ form.content }}</p>
+                
             </ul>
               {% csrf_token %}
             <input type="submit" value="send message" />

@@ -25,6 +25,7 @@ def send(request):
         form = MessageForm()
         return render_to_response('messages/send.html', locals())
 
+
 @login_required
 def sendToUser(request,user_id):
     user = request.user
@@ -37,16 +38,18 @@ def sendToUser(request,user_id):
         else:
             return HttpResponseRedirect(reverse("my"))
     else:
-        message = Message(receiver = User.objects.get(pk = user_id))
-        form = MessageForm(instance = message)        
+        receiver = User.objects.get(pk = user_id)
+        form = MessageForm()        
         return render_to_response('messages/send.html', locals())
+
+
 
 @login_required
 def myMessages(request):
     user = get_object_or_404(User, pk=request.user.id)
     send_messages = user.send_messages
     receive_messages = user.receive_messages
-    
+    form = MessageForm()
     return render_to_response('messages/my.html', locals())
 
 @login_required

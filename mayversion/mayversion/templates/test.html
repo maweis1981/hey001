@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>test comet with orbited + django</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="peter">
+	<!-- Date: 2010-03-24 -->
+	<script type="text/javascript" charset="utf-8">
+		document.domain = document.domain;
+	</script>
+
+	<script src="/static/js/Orbited.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		Orbited.settings.port = 9000;
+		Orbited.settings.hostname = "localhost";
+		TCPSocket = Orbited.TCPSocket;
+	</script>
+
+	<script src="/static/js/stomp.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		var add_message = function(body){
+		    alert(body);
+			var message1 = body.toString();
+			message_div = document.createElement("div");
+			message_div.innerHTML = message1;
+			document.getElementById("messages").innerHTML=message_div;
+		};
+
+	    onload = function(){
+	        
+	        document.getElementById("messages").innerHTML="<p>Will Be connect</p>";
+
+
+			stomp = new STOMPClient();
+
+			stomp.onopen = function(){
+			};
+
+			stomp.onclose = function(c){
+				document.getElementById("messages").innerHTML= "lost";
+			};
+
+			stomp.onerror = function(error){
+				document.getElementById("messages").innerHTML="error";
+			};
+
+			stomp.onerrorframe = function(frame){
+				document.getElementById("messages").innerHTML= "on error frame";
+			};
+
+			stomp.onmessageframe = function(frame){
+			    document.getElementById("messages").innerHTML= "on message";
+				add_message(frame.body);
+			};
+
+  document.getElementById("messages").innerHTML="check over";
+
+		    stomp.connect('localhost', 61613, 'guest','guest');
+		      document.getElementById("messages").innerHTML="connect done";
+		    stomp.subscribe('/messages');
+		      document.getElementById("messages").innerHTML="subscribe done";
+
+
+		};
+		onunload = function(){
+	    	stomp.reset();
+		}
+//
+//		$(document.getElementById('send_message')).click(function(){
+//			var message_text = document.getElementById('message_text').value;
+//			$.ajax({
+//				type:'POST',
+//				url:'http://localhost:8000/microblog/xhr',
+//				data:{
+//					'message':message_text,
+//				},
+//			});
+//		});
+	</script>
+</head>
+
+<body>
+
+<div id="message_push">
+	<input type="text" value="message text" id="message_text"/><br/>
+	<div id="send_message"><button>send it</button></div>
+</div>
+<hr/>
+<div id="messages">ready....</div>
+
+</body>
+</html>

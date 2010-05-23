@@ -1,6 +1,23 @@
+         {% load avatar_tags %}
 {% for t in tweets %}
-<a href="{% url space t.sender.id %}">{{ t.sender }}</a>: {{ t.text }} on {{ t.sent }}<br/>
+
+<li class="hentry">
+  <span class="thumb vcard author">
+  {% avatar t.sender 48 %}
+  </span>
+ <span class="status-body">
+    <span class="status-content">
+    <strong><a href="{% url space t.sender.id %}" class="tweet-url screen-name">{{ t.sender }}</a></strong>
+
+    <span class="entry-content">{{ t.text }}</span>
+   </span>
+  <br/>
+  <a class="entry-date" rel="bookmark" href="#">
+    <span class="published timestamp" data="{{ t.sent }}">Just Now</span>
+  </a>
+  <span>via <a href="#" rel="nofollow">Web</a></span>
+  <a href="#">in reply to {{ t.sender }}</a>  </span>
+</span>
+</li>
+
 {% endfor %}
-<hr/>
-{{ prefix_sender }}<br/>
-{{ are_mine }}<br/>

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="generator" content="Adobe GoLive" />
+		<title>copy book tools</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="/static/css/main.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="/static/css/twitter.css" />
+		<script language="javascript1.5" src="/static/js/jquery-1.3.2.min.js"></script>
+
+<script language="javascript1.5" src="/static/js/Orbited.js"></script>
+<script language="javascript1.5" src="/static/js/json2.js"></script>
+<script language="javascript1.5" src="/static/js/stomp.js"></script>
+        <script>
+//        // set the orbited settings and port
+//        Orbited.settings.port = 9000;
+        Orbited.settings.hostname = "192.168.0.2";
+//        Orbited.settings.streaming = false;
+        TCPSocket = Orbited.TCPSocket;
+        </script>
+
+        <script>
+
+        $(document).ready(function(){
+
+         $('#send_tweet_btn').click(function(){
+                var text = $('textarea[name=text]');
+                var data = 'book_id=' + text.val();
+                $.post("/bookreader/copy_book_from_sina",data);
+        });
+
+//    var data = '/accounts/friends';
+//    $("#new_tweet").autocomplete(data);
+
+        // set up stomp client.
+            stomp = new STOMPClient();
+            stomp.onopen = function() {
+
+            };
+            stomp.onclose = function(code) {
+
+            };
+            stomp.onerror = function(error) {
+                alert("onerror: " + error);
+            };
+            stomp.onerrorframe = function(frame) {
+                alert("onerrorframe: " + frame.body);
+            };
+            stomp.onconnectedframe = function() {
+                stomp.subscribe('bookreader');
+
+            };
+            stomp.onmessageframe = function(frame) {
+            msg = JSON.parse(frame.body);
+                add_message(msg);
+//             $('#message_list').after( msg["user"] + ":" + msg["message"] + " at " + msg["time"] + "<br/>");
+            };
+			stomp.connect(Orbited.settings.hostname,61613);
+
+
+  });
+
+
+        function add_message(msg){
+          $("<br/>" + msg["message"] + " at " + msg["time"] + "<br/>").prependTo("#message_list");
+
+
+
+        }
+
+
+
+</script>
+
+</head>
+
+
+ <div id="send_tweets_form">
+ <div>将sina读书的URL粘贴在下方的输入框中</div>
+ <div>例如：</div>
+ <div><a href="http://vip.book.sina.com.cn/book/index_116253.html">http://vip.book.sina.com.cn/book/index_116253.html</a></div>
+ <div>也可以直接输入ID,例如：</div>
+ <div>116253</div><br/>
+<form id="tweetForm" method="POST" action="">
+
+<textarea rows="1" cols="60" name="text" id="new_tweet"></textarea>
+
+<input id="send_tweet_btn" type="button" value="Get Book"/>
+</form>
+</div>
+<div id="message_list">
+    status:
+</div>
+</body>
+
+</html>
