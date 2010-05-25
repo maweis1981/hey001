@@ -14,6 +14,11 @@ urlpatterns = patterns('django.views.generic.date_based',
     url(r'^gallery/(?P<year>\d{4})/$', 'archive_year', gallery_args, name='pl-gallery-archive-year'),
     url(r'^gallery/?$', 'archive_index', gallery_args, name='pl-gallery-archive'),
 )
+
+urlpatterns += patterns('photologue.views',
+    url(r'^gallerys/?$', 'gallery_index',name='hey-gallery-archive'),
+)
+
 urlpatterns += patterns('django.views.generic.list_detail',
     url(r'^gallery/(?P<slug>[\-\d\w]+)/$', 'object_detail', {'slug_field': 'title_slug', 'queryset': Gallery.objects.filter(is_public=True), 'extra_context':{'sample_size':SAMPLE_SIZE}}, name='pl-gallery'),
     url(r'^gallery/page/(?P<page>[0-9]+)/$', 'object_list', {'queryset': Gallery.objects.filter(is_public=True), 'allow_empty': True, 'paginate_by': 5, 'extra_context':{'sample_size':SAMPLE_SIZE}}, name='pl-gallery-list'),
