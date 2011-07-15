@@ -33,6 +33,11 @@ TODO: Design new notification strategy ,
 	b, check the location has beside..
 
 
+	device change the location - > self check the location info by accuracy setting level ->
+
+	server get the location info -> check the location info with remind -> <> remind send or not <> save remind send result ->save location.
+
+
 15,Add Edit method for remind model
 
 16,Add Delete Method for every model.

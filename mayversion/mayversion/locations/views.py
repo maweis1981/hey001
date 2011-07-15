@@ -190,6 +190,7 @@ def commitLocation(request):
         if request.POST['latitude']:
             location = Location()
             user = User.objects.get(pk=request.POST['user_id'])
+
             location.user = user
             location.latitude = Decimal(request.POST['latitude'].strip())
             location.longitude = Decimal(request.POST['longitude'].strip())
