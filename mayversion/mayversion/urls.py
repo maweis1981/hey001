@@ -17,6 +17,13 @@ urlpatterns = patterns('',
     (r'^bookreader/', include('bookreader.urls')),
     (r'^votes/', include('votes.urls')),
     (r'^photologue/', include('photologue.urls')),
+    (r'^locations/', include('locations.urls')),
+    (r'^reminds/', include('reminds.urls')),
+    (r'^groups/',include('groups.urls')),
+    (r'^foods/',include('foods.urls')),
+    (r'^friends/',include('friends.urls')),
+    (r'^weibo/',include('weibo.urls')),
+    (r'^twitter/',include('twitter.urls')),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),

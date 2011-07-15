@@ -7,7 +7,7 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
-from photologue.models import Gallery
+from photologue.models import Gallery ,Photo
 from django.conf import settings
 
 
@@ -19,7 +19,8 @@ gallery_args = {'date_field': 'date_added', 'allow_empty': True, 'queryset': Gal
 @login_required
 def gallery_index(request):
     user = request.user
-    latest = Gallery.objects.filter(is_public=True) 
+#    latest = Photo.objects.filter(user=user)
+    latest = Gallery.objects.filter(is_public=True)
     sample_size = SAMPLE_SIZE
-    return render_to_response('photologue/gallery_archive.html', locals())
+    return render_to_response('photologue/photo_archive.html', locals())
 

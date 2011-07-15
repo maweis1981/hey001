@@ -2,6 +2,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response,get_object_or_404,HttpResponse
+
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User,Message
@@ -14,6 +15,14 @@ from microblog.forms import TweetForm
 from votes.models import Poll
 # from polls.models import Poll
 from photologue.models import Photo
+from django.http import HttpResponse
+from reminds.models import UserDeviceToken
+
+from decimal import *
+from apns import APNs, Payload
+import settings
+
+import simplejson as json
 
 def reg(request):
     if request.method == 'POST':
@@ -27,7 +36,50 @@ def reg(request):
     else:
         form = UserCreationForm()
     return render_to_response('regist.html', locals())
-
+    
+    
+def regViaDevice(request):
+    if request.method == 'POST':
+        if request.POST['token']:
+            user = User()
+            user.username = request.POST['username']
+            user.email = request.POST['email']
+            user.set_password(request.POST['password'])
+            user.save()
+            tokenUser = UserDeviceToken()
+            tokenUser.reminder = user
+            tokenUser.deviceToken = request.POST['token']
+            tokenUser.save()
+            print tokenUser.deviceToken
+            apns = APNs(use_sandbox=True, cert_file=settings.APNS_CERTIFICATE,key_file=settings.APNS_KEY)
+            payload = Payload(alert="welcome to socialReminder.com!", sound="default", badge=1)
+            apns.gateway_server.send_notification(tokenUser.deviceToken, payload)
+            return HttpResponse('{"result":"ok","user_id":"%s"}' % user.id)
+        else:
+            return HttpResponse('{result:failed}')
+    return HttpResponse('{result:noPost}')
+    
+def loginViaDevice(request):
+    if request.method == 'POST':
+        token=request.POST['token']
+        if token:
+            print token
+            device = UserDeviceToken.objects.filter(deviceToken=token)
+            if len(device) == 1:
+                user_info = {}
+                user_info['result'] = 'ok'
+                user_info['user_id'] = device[0].reminder.id
+                user_info['user_name'] = device[0].reminder.username
+                user_info['user_email'] = device[0].reminder.email
+                
+                return HttpResponse(json.dumps(user_info))
+            else:
+                return HttpResponse('{result:overlimits}')
+        else:
+            return HttpResponse('{result:noDeviceNeedReg}')
+    return HttpResponse('{result:error}')
+        
+# user device token
 
 @login_required
 def my(request):
@@ -36,7 +88,7 @@ def my(request):
     
     #will be filter by user self
     messages = Message.objects.all().order_by('-id')[:5]
-    datings = Dating.objects.all().order_by('-id')[:5]
+    # datings = Dating.objects.all().order_by('-id')[:5]
     recomms = User.objects.all().order_by('-id')[:4]
     tweets = TweetInstance.objects.tweets_for(request.user)[:10]
     

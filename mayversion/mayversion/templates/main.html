@@ -6,14 +6,23 @@
   <script type="text/javascript" src="/static/js/jquery.bgiframe.min.js"></script>
   <script type="text/javascript" src="/static/js/jquery.autocomplete.js"></script>
   <script type="text/javascript" src="/static/js/jquery.form.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-imgslideshow.js"></script>
+      <script type="text/javascript">
+          $(function(){
+              $('#container').imgSlideShow({itemclass: 'item', 'delay': 3000})
+          });
+      </script>
 
   <script type="text/javascript" src="/static/js/Orbited.js"></script>
   <script type="text/javascript" src="/static/js/json2.js"></script>
   <script type="text/javascript" src="/static/js/stomp.js"></script>
 
+
+  <script type="text/javascript" src="/static/js/tab.js"></script>
+
         <script>
 //        Orbited.settings.port = 9000;
-        Orbited.settings.hostname = "192.168.0.2";
+        Orbited.settings.hostname = "192.168.0.14";
 //        Orbited.settings.streaming = false;
         TCPSocket = Orbited.TCPSocket;
         </script>
@@ -88,6 +97,32 @@
 
 {% block content %}
 
+
+{% if request.user.is_authenticated %}
+<div id="send_tweets_form">
+	
+	  <!-- <div id="container">
+            <div class="item">
+                <img src="/static/images/2.jpg"/>
+            </div>
+            <div class="item">
+                <img src="/static/images/3.jpg"/>
+            </div>
+            <div class="item">
+                <img src="/static/images/4.jpg"/>
+            </div>
+        </div> -->
+	
+	
+	
+<form id="tweetForm" method="POST" action="">
+<textarea rows="2" cols="200" name="text" id="new_tweet"></textarea>
+<input id="send_tweet_btn" type="button" value="send"/>
+</form>
+</div>
+{% endif %}
+
+
 {% if request.user.is_authenticated %}
 {% load avatar_tags %}
 <div id="avatar">
@@ -115,50 +150,38 @@
 {% block objecttools %}{% endblock %}
 
 
-{% if request.user.is_authenticated %}
-<div id="send_tweets_form">
-<form id="tweetForm" method="POST" action="">
-<textarea rows="2" cols="200" name="text" id="new_tweet"></textarea>
-<input id="send_tweet_btn" type="button" value="send"/>
-</form>
-</div>
-{% endif %}
 
 
-    <p>推荐好友</p>
-	<div id="recommendation">
-	<div id="recomm_friends">
-{% load avatar_tags %}
-{% for ruser in recomms %}
-	<a href="{% url space ruser.id %}" alt="{{ ruser.username }}">{% avatar ruser %} </a>
-{% endfor %}
-</div>
-	</div>
-
+  
 
     <p>动态</p>
 	<div id="task">
 	<div id="task_list">
-	<ul>
-	{% for m in messages %}
-	<li><a href="#">{{ m.user }} - {{ m.message }}</a></li>
-	{% endfor %}
-	</ul>
+		
+		<ul id="sidebar-message">
+		{% if request.user.is_authenticated %}
+		{% for t in tweets %}
+		<li>
+		{% avatar t.sender 20 %}
+		<a href="{% url space t.sender.id %}">{{ t.sender }}</a>
+		<span>{{ t.text }} at {{ t.sent|timesince }}</span>
+		</li>
+		{% endfor %}
+		{% endif %}
+		</ul>
+		
+		
+	<!-- <ul>
+		{% for m in messages %}
+		<li><a href="#">{{ m.user }} - {{ m.message }}</a></li>
+		{% endfor %}
+		</ul> -->
 	</div>
 	</div>
 
 
 
-    <p>约会</p>
-	<div id="party">
-	<div id="party_list">
-	<ul>
-	{% for d in datings %}
-	<li><a href="{% url dating_detail d.id %}">{{ d.id }}--{{ d.title }}</a></li>
-	{% endfor %}
-	</ul>
-    </div></div>
-
+ 
     <p>投票</p>
     <div id="vote">
 	<div id="vote_list">
@@ -173,6 +196,64 @@
     
     
 {% block sidebar %}
+
+  <p>推荐好友</p>
+	<div id="recommendation">
+	<div id="recomm_friends">
+{% load avatar_tags %}
+{% for ruser in recomms %}
+	<a href="{% url space ruser.id %}" alt="{{ ruser.username }}">{% avatar ruser %} </a>
+{% endfor %}
+</div>
+	</div>
+	
+	
+	<!-- example 1 -->  
+	<ul id="tabs_example_one" class="subsection_tabs">  
+	    <li class="tab"><a href="#one">One</a></li>  
+	    <li class="tab"><a href="#two">Two</a></li>  
+	</ul>  
+	<div id="one"><p>This is the simplest example of a set of tabs.</p></div>  
+	<div id="two"><p>Note that the styling for the tabs is done with CSS, not the Control.Tabs script.</p></div>  
+
+	<!-- example 2 -->  
+	<ul id="tabs_example_two" class="subsection_tabs">  
+	    <li class="tab"><a href="#a">One</a></li>  
+	    <li class="tab"><a href="#b">Two</a></li>  
+	    <li class="tab"><a href="#c">Three</a></li>  
+	    <li class="tab"><a href="#d">Four</a></li>  
+	</ul>  
+	<div id="a"><p>This example demonstrates scripting a Control.Tabs instance. Try clicking the links below, or changing the select box.</p></div>  
+	<div id="b"><p>I am the second tab.</p></div>  
+	<div id="c"><p>I am the third tab.</p></div>  
+	<div id="d"><p>I am the fourth tab.</p></div>  
+	<a href="" id="tabs_example_two_first" style="margin-right:10px;">&laquo;</a>  
+	<a href="" id="tabs_example_two_previous" style="margin-right:10px;">&larr;</a>  
+	<select id="tabs_example_two_select" style="margin-right:10px;">  
+	    <option value="a">One</option>  
+	    <option value="b">Two</option>  
+	    <option value="c">Three</option>  
+	    <option value="d">Four</option>  
+	</select>  
+	<a href="" id="tabs_example_two_next" style="margin-right:10px;">&rarr;</a>  
+	<a href="" id="tabs_example_two_last">&raquo;</a>  
+
+	<!-- example 3 -->  
+	<ul class="tabbed_images" id="tabs_example_three">  
+	    <li><a href="#image_1"><img src="/stylesheets/sample_images/tabs_example_1_small.jpg"/></a></li>  
+	    <li><a href="#image_2"><img src="/stylesheets/sample_images/tabs_example_2_small.jpg"/></a></li>  
+	    <li><a href="#image_3"><img src="/stylesheets/sample_images/tabs_example_3_small.jpg"/></a></li>  
+	    <li><a href="#image_4"><img src="/stylesheets/sample_images/tabs_example_4_small.jpg"/></a></li>  
+	</ul>  
+	<img src="/stylesheets/sample_images/tabs_example_1_big.jpg" id="image_1"/>  
+	<img src="/stylesheets/sample_images/tabs_example_2_big.jpg" id="image_2"/>  
+	<img src="/stylesheets/sample_images/tabs_example_3_big.jpg" id="image_3"/>  
+	<img src="/stylesheets/sample_images/tabs_example_4_big.jpg" id="image_4"/>
+	
+	
+	
+{% endblock %}
+<!--
 <ul id="sidebar-message">
 {% if request.user.is_authenticated %}
 {% for t in tweets %}
@@ -184,5 +265,4 @@
 {% endfor %}
 {% endif %}
 </ul>
-{% endblock %}
-
+ -->

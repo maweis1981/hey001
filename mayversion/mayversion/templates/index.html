@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <link rel="stylesheet" href="http://localhost/static/demos/stomp/style.css" />
+    <link rel="stylesheet" href="http://61.155.8.73:7777/static/demos/stomp/style.css" />
     <title>JavaScript Stomp Test</title>
     <style>
         #output {
@@ -14,13 +14,13 @@
             margin: 0.5em 0;
         }
     </style>
-    <script src="http://localhost/static/Orbited.js"></script>
+    <script src="http://61.155.8.73:7777/static/Orbited.js"></script>
     <script>
         TCPSocket = Orbited.TCPSocket;
     </script>
 
-    <script src="http://localhost/static/protocols/stomp/stomp.js"></script>
-    <script src="http://localhost/static/demos/stomp/shell.js"></script>
+    <script src="http://61.155.8.73:7777/static/protocols/stomp/stomp.js"></script>
+    <script src="http://61.155.8.73:7777/static/demos/stomp/shell.js"></script>
     <script>
         onload = function() {
             // set up shell.
@@ -47,7 +47,7 @@
             stomp.onmessageframe = function(frame) {
                 shell.print(frame.body);
             };
-			alert(stomp.connect('localhost',61613));
+			alert(stomp.connect('61.155.8.73',61613));
 			alert(stomp.subscribe('/messages'));
         };
         onunload = function() {

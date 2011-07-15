@@ -12,8 +12,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
 'default': {
-'ENGINE': 'mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-'NAME': 'hey001-mayversion',                      # Or path to database file if using sqlite3.
+'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+'NAME': 'socialReminder',                      # Or path to database file if using sqlite3.
 'USER': 'root',                      # Not used with sqlite3.
 'PASSWORD': 'password',                  # Not used with sqlite3.
 'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -28,12 +28,12 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Asia/Shanghai'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
-#LANGUAGE_CODE = 'zh-CN'
+# LANGUAGE_CODE = 'zh-CN'
 
 SITE_ID = 1
 
@@ -103,9 +103,9 @@ INSTALLED_APPS = (
 'accounts',
 'groups',
 'messages',
-'datings',
+# 'datings',
 'microblog',
-'bookreader',
+# 'bookreader',
 'votes',
 'avatar_crop',
 'avatar',
@@ -113,11 +113,39 @@ INSTALLED_APPS = (
 'photologue',
 'tagging',
 'sorted_paginated_authored_archived_list_view',
-'iptocountry',
+# 'iptocountry',
+'locations',
+# 'django_cron',
+'reminds',
+'foods',
+'weibo',
+'twitter',
+# 'friends',
+# 'mailer',
+# 'notification',
+# 'emailconfirmation',
 )
+
+
+#-------------------------------------------------------
+#Var
+#-------------------------------------------------------
+###AppInfo
+WEIBO_APP_KEY = "1245737263"
+WEIBO_APP_SECRET = "7fe77ecdf63a2c162150bc901a67a7b2"
+
+consumer_key    = 'NYqIbv9vCijVb2B6x7jhHg'
+consumer_secret = 'fwqThazPj8UGUoEHgErQWjrePssvEdnYpHFuYLfL7jw'
 
 AVATAR_CROP_MIN_SIZE = 8
 
 AUTH_PROFILE_MODULE = "accounts.UserProfile"
 
-ORBITED_SERVER = "192.168.0.2"
+ORBITED_SERVER = "192.168.0.14"
+APP_SERVER_HOST = "http://192.168.0.14:8000"
+
+APNS_CERTIFICATE = os.path.join(PROJECT_PATH,'social-reminder-apns-dev-cert.pem')
+APNS_KEY = os.path.join(PROJECT_PATH,'social-reminder-noenc-apns-dev-key.pem')
+
+# APNS_CERTIFICATE = '/Users/peter/github-projects/hey001/mayversion/ourpoke-dev.pem'
+# APNS_KEY = '/Users/peter/github-projects/hey001/mayversion/ourpoke-dev.pem'

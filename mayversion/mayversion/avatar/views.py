@@ -12,6 +12,8 @@ from avatar import AVATAR_MAX_AVATARS_PER_USER
 from avatar.models import Avatar
 from avatar.util import get_primary_avatar, get_default_avatar_url
 from avatar.forms import PrimaryAvatarForm, DeleteAvatarForm, UploadAvatarForm
+from django.shortcuts import render_to_response, get_object_or_404,HttpResponse,get_list_or_404
+from django.contrib.auth.models import User
 
 try:
     notification = get_app('notification')
@@ -71,6 +73,39 @@ def _get_avatars(user):
         avatars = avatars[:AVATAR_MAX_AVATARS_PER_USER]
     return (avatar, avatars)    
 
+def avatarForUser(request,user_id):
+    user = User.objects.get(pk = user_id)
+    size = 80
+    avatar = get_primary_avatar(user,size=size)
+    if avatar:
+        # return HttpResponse('{"avatar_url": "%s"}' % avatar.avatar_url(size))
+        return HttpResponseRedirect(avatar.avatar_url(size))
+    else:
+        url = get_default_avatar_url()
+        # return HttpResponse('{"avatar_url":"%s"}' % url)
+        return HttpResponseRedirect(url)
+
+def uploadAvatarFromDevice(request):
+    user = User.objects.get(pk = request.POST['user_id'])
+    avatar, avatars = _get_avatars(user)
+    upload_avatar_form = UploadAvatarForm(request.POST or None,
+            request.FILES or None, user = user)
+    if request.method == 'POST' and 'avatar' in request.FILES:
+        if upload_avatar_form.is_valid():
+            avatar = Avatar(
+                user = user,
+                primary = True,
+            )
+            image_file = request.FILES['avatar']
+            avatar.avatar.save(image_file.name, image_file)
+            avatar.save()
+
+            updated = True
+            user.message_set.create(message=_("Successfully uploaded a new avatar from device."))
+            if notification:
+                _notification_updated(request, avatar)
+    return HttpResponse('{"result":"success"}')
+
 @login_required
 def add(request, extra_context={}, next_override=None, *args, **kwargs):
     avatar, avatars = _get_avatars(request.user)
@@ -96,7 +131,7 @@ def add(request, extra_context={}, next_override=None, *args, **kwargs):
             context_instance = RequestContext(
                 request,
                 { 'avatar': avatar,
- 			      'request': request,
+                   'request': request,
                   'avatars': avatars, 
                   'upload_avatar_form': upload_avatar_form,
                   'next': next_override or _get_next(request), }
@@ -132,8 +167,8 @@ def change(request, extra_context={}, next_override=None, *args, **kwargs):
         context_instance = RequestContext(
             request,
             { 
-			  'request': request,
-			  'avatar': avatar, 
+              'request': request,
+              'avatar': avatar,
               'avatars': avatars,
               'upload_avatar_form': upload_avatar_form,
               'primary_avatar_form': primary_avatar_form,
@@ -168,7 +203,7 @@ def delete(request, extra_context={}, next_override=None, *args, **kwargs):
         context_instance = RequestContext(
             request,
             { 'avatar': avatar, 
-			  'request': request,
+              'request': request,
               'avatars': avatars,
               'delete_avatar_form': delete_avatar_form,
               'next': next_override or _get_next(request), }

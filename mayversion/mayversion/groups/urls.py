@@ -1,20 +1,15 @@
-#!/usr/bin/env python
-# encoding: utf-8
-"""
-urls.py
+from django.conf.urls.defaults import *
 
-Created by peter on 2010-04-27.
-Copyright (c) 2010 __MyCompanyName__. All rights reserved.
-"""
-
-import sys
-import os
-
-
-def main():
-	pass
-
-
-if __name__ == '__main__':
-	main()
-
+urlpatterns = patterns('groups.views',
+    url(r'^request$', 'requestFriend', name='requestFriend'),
+    url(r'^request$', 'approveFriendRequest', name='approveFriendRequest'),
+    url(r'^myRequestFriends$','myRequestFriends',name='myRequestFriends'),
+    url(r'^approveRequest$','approveFriendRequest',name='approveFriendRequest'),
+    url(r'^myFriends$','myFriends',name='myFriends'),
+    url(r'^friends/$','myFriendList',name='myFriendList'),
+    url(r'^waitings/$','myRequestFriendsList',name='myRequestFriendsList'),
+    url(r'^add/$','addFriend',name='addFriend'),
+    url(r'^sendRequest/$','requestFriendInWeb',name='requestFriendInWeb'),
+    url(r'^search/([^/]+)','searchUser',name='searchUser'),
+    url(r'^find$','searchFriend',name='searchFriend'),
+)

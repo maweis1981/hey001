@@ -3,8 +3,10 @@
 
 from django.shortcuts import render_to_response,HttpResponse
 
-from bookreader.models import Book
+from bookreader.models import Book,Categories
 from bookreader.SinaReader import SinaRead
+
+from django.core import serializers
 
 import settings
 import re
@@ -51,3 +53,25 @@ def listBooks(request):
         books = paginator.page(paginator.num_pages)
         
     return render_to_response('bookreader/list.html', locals())
+
+
+def jsonCategories(request):
+    category = Categories.objects.all()
+    response = HttpResponse(mimetype="text/javascript")
+    serializers.serialize("json", category, stream=response)
+    return response
+
+
+def jsonBooks(request,category_id):
+    category = Categories.objects.get(pk=category_id)
+    books = Book.objects.filter(category_books=category)
+    response = HttpResponse(mimetype="text/javascript")
+    serializers.serialize("json", books, stream=response)
+    return response
+
+
+def bookDetails(request,book_id):
+    book = Book.objects.get(pk=book_id)
+    response = HttpResponse(mimetype="text/javascript")
+    serializers.serialize("json", [book], stream=response)
+    return response

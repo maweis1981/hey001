@@ -3,6 +3,7 @@ from django.conf.urls.defaults import *
 urlpatterns = patterns('microblog.views',
     url(r'^index$', 'personal', name='tweets_you_follow'),
     url(r'^ajaxTweetSend$', 'ajaxTweetSend', name='tweets_ajax_send'),
+    url(r'^iPhoneTweetSend$','iPhoneTweetSend', name='iPhoneTweetSend'),
     url(r'^ajaxTweetList$', 'ajaxTweetList', name='tweets_ajax_list'),
     url(r'^ajaxPublicTweetList$', 'ajaxPublicTweetList', name='public_tweets_ajax_list'),
     url(r'^all/$', 'public', name='all_tweets'),

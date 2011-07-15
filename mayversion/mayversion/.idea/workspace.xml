@@ -1,418 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="fa1b1f98-b273-4e0e-a2b6-c81dd963de23" name="Default" comment="run it on vps">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/templatetags/iptocountry_flag.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ge.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/polls/vote_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/do.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.24.26 AM_display.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nohup.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ls.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tw.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/editMore.html" afterPath="$PROJECT_DIR$/templates/editMore.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mz.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/jo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/published_manager/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/eu.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/comments.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/hk.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/space.html" afterPath="$PROJECT_DIR$/templates/space.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/lv.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/microblog/followers.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gh.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/fixtures/initial_data.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/Screen shot 2009-12-22 at 1.26.24 PM.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/jp.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/polls/poll_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ug.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/tags/next_in_gallery.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gl.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.24.26 AM_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mx.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/photo_archive_year.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/gallery_archive.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bi.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/kw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tt.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorted_paginated_authored_archived_list_view/templatetags/paginator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ne.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/az.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.17.17 AM_display.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/peter/resized/120/2197221326_c004030139_b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/pt.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bd.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/polls/poll_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/gallery_archive_year.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/at.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/votes/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/us.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/fr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ao.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/Screen shot 2010-04-08 at 8.24.26 AM.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/nc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bookreader/copy_book.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorted_paginated_authored_archived_list_view/templatetags/paginateby.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/gallery_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/re.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/kg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/nl.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-12 at 5.38.18 PM_display.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/votes/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gq.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ec.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorted_paginated_authored_archived_list_view/templatetags/sorter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/be.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/pa.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/pl.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookreader/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/st.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/md.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-12 at 5.32.10 PM_display.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/votes/vote.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ir.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/vi.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/maven/resized/20/picasabackground.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gmail-contact.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/img06.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/bg02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/np.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/messages/send.html" afterPath="$PROJECT_DIR$/templates/messages/send.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/photo_archive.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/wsd_icon_white_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/nz.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/wsd_icon_white.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorted_paginated_authored_archived_list_view/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/et.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/de.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/pg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mt.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/eg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/peter/2197221326_c004030139_b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sorted_paginated_authored_archived_list_view/paginator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookreader/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/no.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/messages/success.html" afterPath="$PROJECT_DIR$/templates/messages/success.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/Screen shot 2010-04-08 at 8.17.17 AM.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tj.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/cy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ar.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ba.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/yanger1997/resized/80/404.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sl.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bs.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/aw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/gallery_archive_month.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/zw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ma.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookreader/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/um.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mq.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/Screen shot 2010-04-12 at 5.38.18 PM.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/th.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bv.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/yanger/resized/48/120_129723_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/cf.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/lr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/in.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookreader/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mk.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.08.43 AM_admin_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/za.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gp.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/fi.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/votes/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ms.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/to.gif" />
+    <list default="true" id="fa1b1f98-b273-4e0e-a2b6-c81dd963de23" name="Default" comment="run it on vps">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/iptocountry/fixtures/initial_data.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/.svn/all-wcprops" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/.svn/dir-prop-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/.svn/entries" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/.svn/text-base/__init__.py.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/.svn/text-base/feeds.py.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/.svn/text-base/models.py.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/.svn/text-base/settings.py.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/.svn/text-base/urls.py.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/.svn/text-base/utils.py.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/.svn/text-base/views.py.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/feeds.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/fixtures/.svn/all-wcprops" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/fixtures/.svn/entries" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/fixtures/.svn/text-base/test_data.json.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/fixtures/test_data.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/media/.svn/all-wcprops" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/media/.svn/entries" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/media/.svn/text-base/addChoice.js.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/media/.svn/text-base/ajax.js.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/templates/.svn/all-wcprops" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/templates/.svn/entries" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/templatetags/.svn/all-wcprops" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/templatetags/.svn/dir-prop-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/templatetags/.svn/entries" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/templatetags/.svn/text-base/__init__.py.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/templatetags/.svn/text-base/polls_tags.py.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/templatetags/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/templatetags/polls_tags.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polls/views.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../chat-server/orbited.cfg" afterPath="$PROJECT_DIR$/../chat-server/orbited.cfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/spacer.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/al.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ps.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/polls/vote_form_ajax.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/photo_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/es.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/nr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bh.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookreader/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/gallery_archive_day.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/peter/resized/48/Photo on 2009-12-06 at 16.50_cropped.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ht.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/pw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ve.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sorted_paginated_authored_archived_list_view/paginateby.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/na.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/il.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/messages/my.html" afterPath="$PROJECT_DIR$/templates/messages/my.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/wsd_icon_white_display.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gt.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/peter/resized/80/2197221326_c004030139_b.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/models.py" afterPath="$PROJECT_DIR$/accounts/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/af.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorted_paginated_authored_archived_list_view/templatetags/archive.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mv.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/co.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gb.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/nf.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ph.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ae.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/lb.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/urls.py" afterPath="$PROJECT_DIR$/accounts/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/views.py" afterPath="$PROJECT_DIR$/accounts/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/is.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/JSON.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sn.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urls.py" afterPath="$PROJECT_DIR$/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/peter/resized/20/Photo on 2009-12-06 at 16.50_cropped.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ee.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ai.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/votes/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/bg01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/dm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.17.17 AM_thumbnail.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microblog/views.py" afterPath="$PROJECT_DIR$/microblog/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/Screen shot 2010-04-08 at 8.08.43 AM.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/io.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ng.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/py.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/cl.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/maven/resized/48/picasabackground.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ua.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/img02.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/photo_archive_month.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/pm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/tags/prev_in_gallery.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2009-12-22 at 1.26.24 PM_admin_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/dk.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/an.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookreader/demo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microblog/urls.py" afterPath="$PROJECT_DIR$/microblog/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/img05.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ly.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/se.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/vg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/polls/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/uz.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/id.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.08.43 AM_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/protocols/stomp/stomp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gd.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ky.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/iq.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/fj.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/cu.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.08.43 AM_display.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ga.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/kh.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/vc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2009-12-22 at 1.26.24 PM_display.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/br.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/cd.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.17.17 AM_admin_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sz.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/jquery.cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/so.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/bg04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/pk.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mu.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/si.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/dz.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bt.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth_backends.py" afterPath="$PROJECT_DIR$/auth_backends.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/avatar/urls.py" afterPath="$PROJECT_DIR$/avatar/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/avatar/views.py" afterPath="$PROJECT_DIR$/avatar/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookreader/admin.py" afterPath="$PROJECT_DIR$/bookreader/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookreader/models.py" afterPath="$PROJECT_DIR$/bookreader/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookreader/urls.py" afterPath="$PROJECT_DIR$/bookreader/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookreader/views.py" afterPath="$PROJECT_DIR$/bookreader/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groups/admin.py" afterPath="$PROJECT_DIR$/groups/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groups/forms.py" afterPath="$PROJECT_DIR$/groups/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groups/models.py" afterPath="$PROJECT_DIR$/groups/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microblog/forms.py" afterPath="$PROJECT_DIR$/microblog/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2009-12-22 at 1.26.24 PM_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/polls/vote_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ag.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/published_manager/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/lk.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorted_paginated_authored_archived_list_view/templatetags/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sk.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/hr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/votes/list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/aq.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/kn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bf.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/cm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-12 at 5.32.10 PM_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/polls/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ie.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/edit.html" afterPath="$PROJECT_DIR$/templates/edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/published_manager/managers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/photo_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bookreader/list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-12 at 5.32.10 PM_admin_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/ip-to-country.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/hm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/votes/posted-data.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/fm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/zr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tf.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-12 at 5.38.18 PM_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/delete.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/vn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/add.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/zm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/votes/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sa.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/td.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.13.51 AM_admin_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ci.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/peter/resized/48/2197221326_c004030139_b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/am.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/yanger1997/resized/120/404.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sorted_paginated_authored_archived_list_view/sorter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/fo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bw.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/regist.html" afterPath="$PROJECT_DIR$/templates/regist.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/by.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/cn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ws.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gu.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/views.py" afterPath="$PROJECT_DIR$/messages/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/base-backup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/doc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookreader/SinaReader.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ni.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookreader/debug.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/votes/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/stomp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tz.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/gallery_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/root.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ck.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groups/urls.py" afterPath="$PROJECT_DIR$/groups/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groups/views.py" afterPath="$PROJECT_DIR$/groups/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sd.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/kr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/shell.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/hu.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/dj.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/templatetags/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/polls/addChoice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/Screen shot 2010-04-12 at 5.32.10 PM.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/im.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/cr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/peter/resized/120/Photo on 2009-12-06 at 16.50_cropped.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/vu.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/votes/formset-multiple-formsets.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sv.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/jm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/votes/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/Screen shot 2010-04-08 at 8.13.51 AM.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/yu.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photologue/photo_archive_day.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/js/Orbited.js" afterPath="$PROJECT_DIR$/media/js/Orbited.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/lt.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/kp.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/gi.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/hn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ad.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/json2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/va.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/microblog/listing.html" afterPath="$PROJECT_DIR$/templates/microblog/listing.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/sinaRead.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/pf.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ru.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.24.26 AM_admin_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/fk.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/wsd_icon_white_admin_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/jquery.formset.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/iptocountry/flag.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/votes/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ro.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/uk.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/sb.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/la.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/my.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/cz.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/om.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ca.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tp.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/cg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/km.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/er.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/uy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/yanger1997/404.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/microblog/following.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/lc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mh.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/je.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/li.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/lu.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/votes/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/cv.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.13.51 AM_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/it.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mp.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/pr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/peter/resized/20/2197221326_c004030139_b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ye.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/yanger/resized/20/120_129723_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ke.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/bookmark.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/rw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ch.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bj.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookreader/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/ki.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/as.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/kz.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/css/main.css" afterPath="$PROJECT_DIR$/media/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/avatars/yanger1997/resized/48/404.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/bg03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bb.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/votes/inline-formset.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/qa.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/pe.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/au.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-08 at 8.13.51 AM_display.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/tv.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/mn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iptocountry/media/flags/bz.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorted_paginated_authored_archived_list_view/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/photologue/photos/cache/Screen shot 2010-04-12 at 5.38.18 PM_admin_thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/polls/posted.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/twitter.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microblog/urls.py" afterPath="$PROJECT_DIR$/microblog/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microblog/views.py" afterPath="$PROJECT_DIR$/microblog/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photologue/utils/EXIF.py" afterPath="$PROJECT_DIR$/photologue/utils/EXIF.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photologue/views.py" afterPath="$PROJECT_DIR$/photologue/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sorted_paginated_authored_archived_list_view/templatetags/paginateby.py" afterPath="$PROJECT_DIR$/sorted_paginated_authored_archived_list_view/templatetags/paginateby.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/main.html" afterPath="$PROJECT_DIR$/templates/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/microblog/followers.html" afterPath="$PROJECT_DIR$/templates/microblog/followers.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/microblog/following.html" afterPath="$PROJECT_DIR$/templates/microblog/following.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/microblog/listing.html" afterPath="$PROJECT_DIR$/templates/microblog/listing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/regist.html" afterPath="$PROJECT_DIR$/templates/regist.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urls.py" afterPath="$PROJECT_DIR$/urls.py" />
     </list>
-    <ignored path="mayversion.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="mayversion.iws" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -427,135 +90,121 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="mayversion" />
   </component>
-  <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.6122449">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/main.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="4" selection-start="1105" selection-end="1105" vertical-scroll-proportion="-0.6">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/groups/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="29" selection-start="753" selection-end="753" vertical-scroll-proportion="0.56916994">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/groups/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="default.css" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/media/css/default.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="121" column="45" selection-start="1688" selection-end="1688" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="inline-formset.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/votes/inline-formset.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="formset-multiple-formsets.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/votes/formset-multiple-formsets.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/votes/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="25" column="67" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/base.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="17" column="83" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/votes/base.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/votes/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="57" selection-start="165" selection-end="176" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/groups/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="4" selection-start="496" selection-end="496" vertical-scroll-proportion="0.57877815">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/weibo/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="4" selection-start="745" selection-end="749" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1310693671000" expanded="true" signature="744:1282" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accounts/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/locations/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="32" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geoUtils.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/locations/geoUtils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="34" selection-start="708" selection-end="708" vertical-scroll-proportion="0.33333334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/twitter/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/twitter/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/twitter/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="16" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/photologue/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/photologue/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/photologue/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
+    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/bookreader/SinaReader.py" />
-        <option value="$PROJECT_DIR$/microblog/views.py" />
-        <option value="$PROJECT_DIR$/templates/edit.html" />
-        <option value="$PROJECT_DIR$/templates/editMore.html" />
-        <option value="$PROJECT_DIR$/templates/regist.html" />
-        <option value="$PROJECT_DIR$/templates/space.html" />
         <option value="$PROJECT_DIR$/templates/votes/base.html" />
         <option value="$PROJECT_DIR$/templates/photologue/root.html" />
         <option value="$PROJECT_DIR$/templates/photologue/gallery_archive.html" />
@@ -566,10 +215,32 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/groups/views.py" />
+        <option value="$PROJECT_DIR$/photologue/models.py" />
+        <option value="$PROJECT_DIR$/photologue/views.py" />
+        <option value="$PROJECT_DIR$/locations/views.py" />
+        <option value="$PROJECT_DIR$/reminds/views.py" />
+        <option value="$PROJECT_DIR$/weibo/views.py" />
+        <option value="$PROJECT_DIR$/accounts/urls.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Buildout</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -595,6 +266,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -623,7 +295,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="votes" />
+              <option name="myItemId" value="weibo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -637,127 +309,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="votes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="microblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groups" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mayversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounts" />
+              <option name="myItemId" value="locations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToAction.allIncluded" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="GoToAction.allIncluded" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../chat-server" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Python.SinaReader">
+  <component name="RunManager" selected="Python.django run">
     <configuration default="false" name="debug" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bookreader" />
-      <option name="IS_MODULE_SDK" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bookreader" />
+      <option name="IS_MODULE_SDK" value="true" />
       <module name="mayversion" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bookreader/debug.py" />
       <option name="PARAMETERS" value="" />
@@ -768,12 +349,12 @@
     <configuration default="false" name="SinaReader" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bookreader" />
-      <option name="IS_MODULE_SDK" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bookreader" />
+      <option name="IS_MODULE_SDK" value="true" />
       <module name="mayversion" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bookreader/SinaReader.py" />
       <option name="PARAMETERS" value="" />
@@ -781,72 +362,130 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="Default" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console" temporary="true">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonUnitTestConfigurationType" factoryName="Python's unittest">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
-      <envs />
       <module name="mayversion" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="PUREUNITTEST" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <module name="mayversion" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="py.test" factoryName="py.test">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
+      <module name="" />
+      <option name="port" value="8080" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="py.test" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
       <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <module name="mayversion" />
       <option name="testToRun" value="" />
       <option name="keywords" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <module name="" />
-      <option name="port" value="8080" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
+    <configuration default="true" type="PythonDocTestRunConfigurationType" factoryName="Python's doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="mayversion" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
       <method />
     </configuration>
-    <configuration default="false" name="mayversion" type="Python.DjangoServer" factoryName="Django server">
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <configuration default="false" name="mayversion" type="Python.DjangoServer" factoryName="Django server" editBeforeRun="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
       <module name="mayversion" />
       <option name="port" value="8000" />
-      <option name="host" value="127.0.0.1" />
+      <option name="host" value="0.0.0.0" />
       <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
     <configuration default="false" name="django run" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="/usr/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
+      <option name="SDK_HOME" value="/usr/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
       <module name="mayversion" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
       <option name="PARAMETERS" value="runserver 0.0.0.0:8080" />
@@ -856,46 +495,59 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.debug" />
-      <item index="1" class="java.lang.String" itemvalue="Python.SinaReader" />
-      <item index="2" class="java.lang.String" itemvalue="Django server.mayversion" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Django server.mayversion" />
+      <item index="1" class="java.lang.String" itemvalue="Python.debug" />
+      <item index="2" class="java.lang.String" itemvalue="Python.SinaReader" />
       <item index="3" class="java.lang.String" itemvalue="Python.django run" />
+      <item index="4" class="java.lang.String" itemvalue="Query Language Console.Default" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
     <option name="LAST_MERGED_REVISION" />
-    <option name="UPDATE_RUN_STATUS" value="false" />
     <option name="MERGE_DRY_RUN" value="false" />
     <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
     <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
     <option name="IGNORE_SPACES_IN_MERGE" value="false" />
     <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <configuration useDefault="true">$PROJECT_DIR$/../../../../.subversion</configuration>
+    <option name="FORCE_UPDATE" value="false" />
+    <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa1b1f98-b273-4e0e-a2b6-c81dd963de23" name="Default" comment="run it on vps" />
+      <created>1310652302361</created>
+      <updated>1310652302361</updated>
+    </task>
+    <servers />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1002" extended-state="1" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1920" height="1011" extended-state="6" />
+    <editor active="false" />
     <layout>
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971296" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15295358" sideWeight="0.15646258" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10526316" sideWeight="0.99776953" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17156601" sideWeight="0.32586786" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15295358" sideWeight="0.8356009" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997195" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19522472" sideWeight="0.9984363" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17156601" sideWeight="0.6651736" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37697518" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50813514" sideWeight="0.9928115" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.105442174" sideWeight="0.99776953" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -905,6 +557,15 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
     <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
@@ -914,6 +575,9 @@
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="ENABLE_BACKGROUND_PROCESSES" value="true" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="run it on vps" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
@@ -935,90 +599,94 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/photologue/gallery_archive.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="18" selection-start="410" selection-end="410" vertical-scroll-proportion="-8.842105" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/photologue/photo_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="113" selection-start="219" selection-end="324" vertical-scroll-proportion="-6.9473686" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="32" selection-start="1456" selection-end="1456" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/votes/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="58" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="45" selection-start="1688" selection-end="1688" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/votes/inline-formset.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/votes/formset-multiple-formsets.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/votes/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="67" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="83" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/votes/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/votes/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="57" selection-start="165" selection-end="176" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="4" selection-start="1105" selection-end="1105" vertical-scroll-proportion="-0.6">
+        <state line="90" column="0" selection-start="3194" selection-end="3194" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photologue/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locations/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="0" selection-start="5934" selection-end="5934" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="0" selection-start="4155" selection-end="4155" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reminds/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="11" selection-start="2774" selection-end="2774" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/groups/views.py">
+    <entry file="file://$PROJECT_DIR$/photologue/templates/photologue/gallery_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weibo/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="4" selection-start="745" selection-end="749" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1310693671000" expanded="true" signature="744:1282" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/groups/models.py">
+    <entry file="file://$PROJECT_DIR$/locations/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="753" selection-end="753" vertical-scroll-proportion="0.56916994">
+        <state line="6" column="32" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="16" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photologue/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photologue/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photologue/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locations/geoUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="34" selection-start="708" selection-end="708" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>

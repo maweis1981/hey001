@@ -28,10 +28,6 @@ import json
 import stomp
 import datetime
 
-
-
-
-
 if "notification" in settings.INSTALLED_APPS:
     from notification import models as notification
 else:
@@ -58,6 +54,31 @@ def personal(request):
     tweets = TweetInstance.objects.tweets_for(request.user)
     return render_to_response('microblog/personal.html',locals())
 
+def iPhoneTweetSend(request):
+    try:
+        print request.POST['user_id']
+        user = User.objects.get(pk=request.POST['user_id'])
+        form = TweetForm(user,request.POST)
+    except (RuntimeError, TypeError, NameError):
+        pass
+    if form.is_valid():
+        form.save()
+        try:
+            conn = stomp.Connection([(settings.ORBITED_SERVER, 61613)], 'guest', 'guest')
+            conn.start()
+            conn.connect()
+            now = datetime.datetime.now()
+            o = {"user_id":user.id,"avatar":avatar(user,20),"user":user.username,"message":request.POST["text"],"time":timesince(now)}
+            msg_to_send = json.dumps(o)
+        except Exception as msg:
+            print 'test %s' % msg
+        print msg_to_send
+        conn.send(msg_to_send, destination=user.username)
+        return HttpResponse('{result:ok}')
+    else:
+        return HttpResponse('{result:data error}')
+
+
 @login_required
 def ajaxTweetSend(request):
     print request.user
@@ -77,7 +98,7 @@ def ajaxTweetSend(request):
             o = {"user_id":request.user.id,"avatar":avatar(request.user,20),"user":request.user.username,"message":request.POST["text"],"time":timesince(now)}
             msg_to_send = json.dumps(o)
         except Exception as msg:
-            print msg
+            print 'test %s' % msg
         print msg_to_send
         conn.send(msg_to_send, destination= request.user.username)
         return HttpResponse('{result:ok}')

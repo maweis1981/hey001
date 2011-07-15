@@ -2,6 +2,14 @@ from django.db import models
 import settings
 
 
+class Categories(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.TextField()
+
+    def __unicode__(self):
+        return self.name
+
+
 # Create your models here.
 class Book(models.Model):
     book_id = models.CharField(max_length=50)
@@ -14,6 +22,7 @@ class Book(models.Model):
 #    cover = models.ImageField(max_length=1024, upload_to=settings.BOOKS_ROOT, blank=True)
     cover_url = models.CharField(max_length=200)
     pub_date = models.DateTimeField(auto_now_add=True)
+    category_books = models.ForeignKey(Categories, related_name='category_books')
 
     def bookFolder(self):
         return "%s/%s-%s/" % (settings.BOOKS_ROOT, self.book_id,self.title)

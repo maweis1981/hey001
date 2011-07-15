@@ -1,20 +1,10 @@
-#!/usr/bin/env python
-# encoding: utf-8
-"""
-admin.py
+from django.contrib import admin
+from groups.models import FriendRequest,Friends
 
-Created by peter on 2010-04-27.
-Copyright (c) 2010 __MyCompanyName__. All rights reserved.
-"""
+class FriendRequestAdmin(admin.ModelAdmin):
+    pass
+class FriendsAdmin(admin.ModelAdmin):
+    pass
 
-import sys
-import os
-
-
-def main():
-	pass
-
-
-if __name__ == '__main__':
-	main()
-
+admin.site.register(FriendRequest,FriendRequestAdmin)
+admin.site.register(Friends,FriendsAdmin)
