@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>点击获取GOOGLE MAP地图上的经纬度坐标的方法</title>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAheKKH5x_FSVoujKClE6qfBTGSd-8Zu6d4QItu2ZsI3b0J68TJRRwKrRczPu3DfbPm3tp2G7gAm2XYQ" type="text/javascript"></script>
+<script type="text/javascript">
+function initialize() {
+if (GBrowserIsCompatible()) {
+   var map = new GMap2(document.getElementById("map_canvas"));
+   map.setCenter(new GLatLng(34.45221847282654,106.69921875), 4);
+   map.setUIToDefault();
+}
+   GEvent.addListener(map, 'click', function(overlay, point) {
+if (overlay) {
+   // nothing
+} else {
+    //清除以前所点击图标
+    map.clearOverlays();
+    document.getElementById("jingwei").innerHTML = point.y + "," + point.x;
+    var marker = map.addOverlay(new GMarker(point));
+	showLocation(point.y+","+point.x);
+	// showLocation('26.08315043827389,119.29633140563965')
+}
+});
+}
+
+
+//get the address by latitude,longitude
+var geocoder = null;
+function addAddressToMap(response) {
+  if (!response || response.Status.code != 200) {
+    alert("对不起，不能解析这个地址");
+  } else {
+  
+    var add="";
+    for(var i=0;i<response.Placemark.length;i++)
+    {
+        add+=response.Placemark[i].address+" | ";
+    }
+    alert("您查找的位置是 : " + add);
+  }
+}
+
+function showLocation(address) {
+
+if (GBrowserIsCompatible()) {
+     geocoder = new GClientGeocoder();
+     geocoder.getLocations(address, addAddressToMap);
+  }
+}
+
+
+</script>
+
+
+
+</head>
+<body onload="initialize()" onunload="GUnload()">
+<div id="map_canvas" style="width: 800px; height: 600px"></div>
+<!-- <input name="officename" type="text" id="jingwei" length="100"/> -->
+<div id="jingwei"></div>
+<div id="Location">I choose Location.</div>
+<div id="address"><a href="javascript:void(0)"
+     onclick="showLocation('26.08315043827389,119.29633140563965');return false;">
+     取得地址 </a></div>
+</body>
+</html>

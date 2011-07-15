@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1>My Reminds</h1>
+
+{% for location in remindLocations.all %}
+
+<div>{{ location.description }} - {{ location.latitude }},{{ location.longitude }}</div>
+
+{% endfor %}
+
+{% endblock %}

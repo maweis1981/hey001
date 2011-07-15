@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1>{{remind.creater}} - {{remind.subject}}</h1>
+
+
+<div>
+	{% for inv in remind.invitee.all %}
+<p>	{{inv.reminder}}  : {{inv.deviceToken}} </p>
+	{% endfor %}
+</div>
+
+{% endblock %}

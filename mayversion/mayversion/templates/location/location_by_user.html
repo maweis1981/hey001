@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Buffalo location Map</title>
+<link rel=Stylesheet href="/static/locations/style.css" type="text/css">
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAheKKH5x_FSVoujKClE6qfBTGSd-8Zu6d4QItu2ZsI3b0J68TJRRwKrRczPu3DfbPm3tp2G7gAm2XYQ" type="text/javascript"></script>
+<script src="/static/locations/cVerticalMapTypeControl.js"></script>
+</head>
+
+<body onload="" onunload="GUnload()">
+
+<script type="text/javascript">
+var map_long = 118.699001;
+var map_lat = 32.145183;
+var map_zoom = 5;
+
+var locations = [{% for location in location_list %}[{{location.longitude}},{{ location.latitude }},'{{ location.address }}','{{ location.type }}','{{ location.date }}']{% if not forloop.last %},{% endif %}{% endfor %}];
+</script>
+<div id="map"></div>
+
+<script type="text/javascript">
+function addlocationMarker(lng, lat, address, location_type, location_date) {
+    var markerpt = new GPoint(lng, lat);
+    var marker = new GMarker(markerpt);
+    var html = '<b>' + location_type + '</b><br>' + address + '<br>' + location_date;
+    GEvent.addListener(marker, "click", function() { marker.openInfoWindowHtml(html); });
+    map.addOverlay(marker);
+}
+
+if (GBrowserIsCompatible()) {
+    var map_div = document.getElementById("map");
+    var map = new GMap2(map_div);
+
+    var pos1 = new GControlPosition(G_ANCHOR_TOP_LEFT, new GSize(19,170));
+    map.addControl(new GSmallMapControl(),pos1 );
+    var pos2 = new GControlPosition(G_ANCHOR_TOP_LEFT, new GSize(7,90));
+    map.addControl(new cVerticalMapTypeControl(), pos2);
+    
+    var pt = new GLatLng(top.map_lat, top.map_long);
+    map.setCenter(pt, 17 - top.map_zoom);
+
+    if (locations) {
+        for (var i=0; i < locations.length; i++) {
+            addlocationMarker(locations[i][0], locations[i][1], locations[i][2], locations[i][3], locations[i][4]);
+        }
+    }
+
+	   GEvent.addListener(map, 'click', function(overlay, point) {
+	if (overlay) {
+	   // nothing
+	} else {
+	    //清除以前所点击图标
+	    map.clearOverlays();
+	    document.getElementById("disclaimer").innerHTML = point.y + "," + point.x;
+	    var marker = map.addOverlay(new GMarker(point));
+		
+	}
+	});
+
+
+}
+</script>
+
+
+<div id="banner" class="mapElement">
+<div id="bannerInner">
+<p><b>Buffalo</p><img src="/static/locations/buffalo.png"><p>location</b></p>
+</div>
+</div>
+
+<div id="nav">
+<h4>位置</h4>
+<ul class="ul-cat">
+    <li><a href="#">配置<a></li>
+    <li><a href="#">我的</a></li>
+</ul>
+</div>
+
+<div id="footer">
+<p>Maven Studio</p>
+</div>
+
+<div id="disclaimer">
+<p>just for studio now.<p>
+</div>
+
+</body>
+</html>

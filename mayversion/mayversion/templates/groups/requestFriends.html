@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+         
+          Friends Request:
+            <ul>
+                {% for friend in requestFriends %}
+                <li>
+                     <p>
+{{friend.user.username}} want to add {{ friend.recipientUser.username }} become friend becaus {{ friend.message }} .  
+
+{% if  friend.status == 0 %}
+{% if friend.recipientUser == request.user %}
+<button id="approve_{{ friend.id }}">APPROVE</button>
+<script type="text/javascript" charset="utf-8">
+		/* attach a submit handler to the form */
+		  $("#approve_{{ friend.id }}").click(function(event) {
+
+		    /* stop form from submitting normally */
+		    event.preventDefault(); 
+
+			url = '{% url approveFriendRequest %}'
+		    /* Send the data using post and put the results in a div */
+		    $.post( url, { user_id: {{ request.user.id }}, friend_request_id: {{ friend.id }},friend_request_status:'1' },
+		      function( data ) {
+		          $( "#result" ).empty().append(data);
+		      }
+		    );
+		  });
+</script>
+{% else %}
+[WAITING]
+{% endif %}
+{% endif %}
+{% if friend.status == 1 %}
+[APPROVED]
+{% endif %}
+</p>
+
+
+</li>
+                {% endfor %}
+            </ul>
+
+
+</div>
+
+<div id="result">result</div>
+{% endblock%}

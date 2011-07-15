@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+{% for f in foods %}
+<li>{{ f.name }} - {{f.price}} <img src="{{ f.photo.url }}" width="300"/></li>
+{% endfor %}
+</div>
+
+{% endblock %}

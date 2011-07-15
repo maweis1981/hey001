@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+         
+          Friends:
+            <ul>
+                {% for friend in friends %}
+                <li>
+                     <p>
+1	{{friend.username}}
+                     </p></li>
+                {% endfor %}
+            </ul>
+
+
+</div>
+{% endblock%}

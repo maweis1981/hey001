@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>My Reminds</h1>
+
+<h2>I Create Reminds:</h2>
+{% for remind in reminds.all %}
+
+<div>{{ remind.subject }} - {{ remind.status }}</div>
+
+{% endfor %}
+
+
+<h2>I accept Reminds:</h2>
+{% for remind in deviceReminds.all %}
+
+<div>{{ remind.subject }} - {{ remind.status }}</div>
+
+{% endfor %}
+
+{% endblock %}

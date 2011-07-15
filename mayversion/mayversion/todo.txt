@@ -1,0 +1,40 @@
+---[DONE] 1, first register, has no user_id value written.
+
+---[DONE]2,search location map should be annotation at current location.
+
+---[DONE]3,upload the remind location jpg to the server
+
+!!![TODO]4,enable/disable the remind who created for you in your status timeline.
+
+---[DONE]5,add random time string in weibo message
+
+---[DONE]6,myLocationViewController submit location data should be in backThread.
+
+
+7,status time line need to rewrite SQL
+
+8,friends tableview need to wrap for enable/disable
+
+9,remind location could not be duplicate and use the server location image
+
+10,custom your location submitter level, plan
+
+---[DONE]11,profile view controller need to implements twitter
+
+12,profile view controller need to implements facebook
+
+13,serverside need to write website.
+
+14,create the new notification method. EVENT module
+TODO: Design new notification strategy , 
+	user commit location info to the server, server detect location info with they created 
+	remind location condition, how to detect, 
+	a, check the remind location is notified yet (in 3 minutes or ..)
+	b, check the location has beside..
+
+
+15,Add Edit method for remind model
+
+16,Add Delete Method for every model.
+
+

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+          User Search:
+
+            <ul>
+                {% for user in users %}
+			
+                <li>	
+	{{ user.username }} <button id="showr_{{ user.id }}">关注此人</button>
+						<div id="addFriendDiv_{{ user.id }}" style="display:none">
+							<form id="appForm_{{ user.id }}" action="{% url requestFriendInWeb %}" method="post">
+								<input type="hidden" name="rec_id" value="{{ user.id }}"/><br/>
+								<textarea name="message" cols="50"></textarea>
+								<input type="submit" value="submit"/>
+							</form>
+							<button id ="hidr_{{ user.id }}">关闭</button>
+						</div>
+                     </li>
+					<script>
+					$("#showr_{{ user.id }}").click(function () {
+					$("#addFriendDiv_{{ user.id }}").show("slow");
+					});    
+					
+					$("#hidr_{{ user.id }}").click(function () {
+					$("#addFriendDiv_{{ user.id }}").hide("slow");
+					});    
+					
+					/* attach a submit handler to the form */
+					  $("#appForm_{{ user.id }}").submit(function(event) {
+
+					    /* stop form from submitting normally */
+					    event.preventDefault(); 
+
+					    /* get some values from elements on the page: */
+					    var $form = $( this ),
+					        term = $form.find( 'input[name="s"]' ).val(),
+					        url = $form.attr( 'action' );
+
+					    /* Send the data using post and put the results in a div */
+					    $.post( url, $("#appForm_{{ user.id }}").serialize(),
+					      function( data ) {
+					          $( "#result" ).empty().append(data);
+					      }
+					    );
+					  });
+					
+				
+					</script>
+                {% endfor %}
+            </ul>
+<div id="result">fadf</div>
+</div>
+
+
+{% endblock%}

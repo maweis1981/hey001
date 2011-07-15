@@ -1,0 +1,30 @@
+<div id="weibo_profile" style="display: none;">
+	<span id="user_profile_image"><img src="%7B%7Buser.profile_image_url%7D%7D" alt=""></span>
+	<span id="user_name">{{user.name}}</span>
+	<span id="user_description"><em>{{user.description}}</em></span>
+</div>
+<div id="up" class="weibo_button">Up</div>
+<div id="weibo">
+{{use.username}}
+	<ul class="sinat-cont">
+		{% for item in result %}
+		<li>
+		<span>{{item.text}}</span>
+		{% if item.retweeted_status %}
+		<p class="retweeted">
+		<strong>{{item.retweeted_status.user.screen_name}}:</strong>
+		 {{item.retweeted_status.text}}
+		{% if item.retweeted_status.thumbnail_pic %}
+		<a href="%7B%7Bitem.retweeted_status.bmiddle_pic%7D%7D" target="_blank"><img src="%7B%7B%20item.retweeted_status.thumbnail_pic%20%7D%7D" alt=""></a>
+		{% endif %}
+		</p>
+		{% endif %}
+		{% if item.pic %}
+		<p><img src="%7B%7B%20item.pic%20%7D%7D" alt=""></p>
+		{%endif%}
+		<p class="letter">{{item.created_at|date:"Y年m月d日 h:n"}}<em>By {{item.source}}</em></p>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+<div id="down" class="weibo_button">Down</div>
